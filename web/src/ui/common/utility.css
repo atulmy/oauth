@@ -1,0 +1,12 @@
+/* utility */
+
+/* - colors */
+:root {
+  --primary: #ff5c00;
+  --positive: #4caf50;
+  --negative: #f44336;
+  --warning: #ff9800;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #aaaaaa;
+}

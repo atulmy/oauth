@@ -1,0 +1,40 @@
+/* root */
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+  border-radius: 0.2rem;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+
+/* states */
+.button:hover {
+  box-shadow: 0 0.2rem 0.5rem #00000033 !important;
+  transform: scale(1.01);
+}
+.button:active {
+  box-shadow: 0 0 0.1rem #00000055 !important;
+  transform: scale(1);
+}
+.button:disabled {
+  box-shadow: 0 0 0.1rem #00000055 !important;
+  background-color: #d0d0d0;
+  background-image: none !important;
+  color: #333333;
+  cursor: not-allowed;
+}
+
+.button img {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}

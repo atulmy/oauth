@@ -1,0 +1,58 @@
+/* - reset */
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f8;
+  display: flex;
+  color: #000000;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: 600 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+code {
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+}
+#root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
