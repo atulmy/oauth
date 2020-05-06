@@ -5,8 +5,8 @@ import { Provider as StateProvider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // UI imports
+import 'ui/common/colors.css'
 import 'ui/common/reset.css'
-import 'ui/common/utility.css'
 
 // App imports
 import { store } from 'setup/store'

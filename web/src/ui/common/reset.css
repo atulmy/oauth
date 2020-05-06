@@ -15,14 +15,14 @@ html {
   box-sizing: inherit;
 }
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f5f8;
+  background-color: var(--white);
   display: flex;
-  color: #000000;
+  color: var(--black);
 }
 a {
   color: inherit;
@@ -41,9 +41,6 @@ h6,
 p {
   margin: 0;
   padding: 0;
-}
-code {
-  font-family: monospace;
 }
 
 body {
