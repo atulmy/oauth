@@ -1,6 +1,7 @@
 // App imports
 import PagesHome from 'modules/pages/Home'
 import PagesAuthorize from 'modules/pages/Authorize'
+import UserDashboard from 'modules/user/Dashboard'
 
 // Combined routes
 const routes = {
@@ -15,6 +16,13 @@ const routes = {
   pagesAuthorize: {
     path: '/authorize',
     component: PagesAuthorize,
+  },
+
+  // user dashboard
+  userDashboard: {
+    path: '/dashboard',
+    component: UserDashboard,
+    auth: true,
   },
 }
 

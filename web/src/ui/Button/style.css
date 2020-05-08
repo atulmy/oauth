@@ -13,25 +13,11 @@
   border-radius: 0.2rem;
   background-color: var(--white);
   border: 1px solid var(--grey);
-  transition: box-shadow 0.2s, transform 0.1s;
-  box-shadow: 0 0.1rem 0.3rem #00000033 !important;
 }
 
 /* states */
 .button:hover {
-  box-shadow: 0 0.2rem 0.5rem #00000033 !important;
-  transform: scale(1.01);
-}
-.button:active {
-  box-shadow: 0 0 0.1rem #00000055 !important;
-  transform: scale(1);
-}
-.button:disabled {
-  box-shadow: 0 0 0.1rem #00000055 !important;
-  background-color: #d0d0d0;
-  background-image: none !important;
-  color: #333333;
-  cursor: not-allowed;
+  border: 1px solid var(--black);
 }
 
 .button img {

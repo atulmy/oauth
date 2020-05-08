@@ -10,6 +10,8 @@ const schema = new Schema(
     email: {
       type: String,
       required: true,
+      unique: true,
+      index: true,
     },
 
     password: {
@@ -17,35 +19,9 @@ const schema = new Schema(
       required: true,
     },
 
-    nameFirst: {
+    name: {
       type: String,
       required: true,
-    },
-
-    nameLast: {
-      type: String,
-      required: true,
-    },
-
-    facebook: {
-      type: Object,
-    },
-
-    google: {
-      type: Object,
-    },
-
-    instagram: {
-      type: Object,
-    },
-
-    image: {
-      type: String,
-      required: true,
-    },
-
-    profile: {
-      type: Object,
     },
   },
   { timestamps: true },

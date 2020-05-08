@@ -3,3 +3,15 @@
   flex-direction: column;
   flex: 1;
 }
+
+.pages-home > .cta {
+  margin-top: 1rem;
+  max-width: 10rem;
+}
+.pages-home > .cta > a {
+  display: block;
+  margin-bottom: 1rem;
+}
+.pages-home > .cta > a > button {
+  width: 100%;
+}

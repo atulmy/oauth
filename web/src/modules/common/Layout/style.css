@@ -1,0 +1,33 @@
+.common-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.common-layout > header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cccccc;
+  padding: 1.5rem 2rem;
+}
+.common-layout > header h5 {
+  margin-top: 0.5rem;
+  color: #666666;
+}
+
+.common-layout > main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem 2rem;
+}
+
+.common-layout > footer {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #cccccc;
+  padding: 1.5rem 2rem;
+}
+.common-layout > footer > a {
+  margin-left: 0.5rem;
+}

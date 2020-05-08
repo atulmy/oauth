@@ -7,8 +7,10 @@ import Button from 'ui/Button'
 import './style.css'
 
 // App imports
-import params from 'setup/config/params'
 import { URL_WEB } from 'setup/config/env'
+import params from 'setup/config/params'
+import { facebook } from 'setup/oauth/url'
+import AuthCheck from 'modules/common/AuthCheck'
 
 // Component
 const Home = () => {
@@ -21,16 +23,31 @@ const Home = () => {
       </Helmet>
 
       {/* content */}
-      <main className='pages-home'>
-        <p>Home</p>
+      <section className='pages-home'>
+        <p>Welcome! Sign in with:</p>
 
-        <div>
+        <div className='cta'>
+          <a href={facebook()}>
+            <Button
+              title='Facebook'
+              image={`${URL_WEB}/images/social/facebook.svg`}
+            />
+          </a>
+
           <Button
-            title='Facebook'
-            image={`${URL_WEB}/images/social/facebook.svg`}
+            title='Google'
+            image={`${URL_WEB}/images/social/google.svg`}
+          />
+
+          <Button
+            title='Instagram'
+            image={`${URL_WEB}/images/social/instagram.svg`}
           />
         </div>
-      </main>
+      </section>
+
+      {/* check user already logged in */}
+      <AuthCheck />
     </>
   )
 }
