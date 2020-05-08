@@ -14,9 +14,9 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
 ### Social platforms
 
-- [x] Facebook
-- [x] Google
-- [x] Instagram
+- [x] [Facebook](#facebook)
+- [x] [Google](#google)
+- [x] [Instagram](#instagram)
 
 ### Tech platforms
 
