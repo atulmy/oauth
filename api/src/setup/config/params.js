@@ -34,6 +34,11 @@ export default {
           key: 'google',
           title: 'Google',
         },
+
+        instagram: {
+          key: 'instagram',
+          title: 'Instagram',
+        },
       },
 
       redirectUri: 'authorize/',

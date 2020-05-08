@@ -27,3 +27,6 @@ export const OAUTH_FACEBOOK_SECRET = process.env.OAUTH_FACEBOOK_SECRET
 
 export const OAUTH_GOOGLE_ID = process.env.OAUTH_GOOGLE_ID
 export const OAUTH_GOOGLE_SECRET = process.env.OAUTH_GOOGLE_SECRET
+
+export const OAUTH_INSTAGRAM_ID = process.env.OAUTH_INSTAGRAM_ID
+export const OAUTH_INSTAGRAM_SECRET = process.env.OAUTH_INSTAGRAM_SECRET

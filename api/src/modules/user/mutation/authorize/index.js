@@ -11,6 +11,7 @@ import User from 'modules/user/model'
 import authResponse from 'modules/user/query/authResponse'
 import facebook from './facebook'
 import google from './google'
+import instagram from './instagram'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -54,6 +55,10 @@ export default async function authorize({ params: { code, state } }) {
 
       case params.user.oauth.providers.google.key:
         userSocial = await google({ code })
+        break
+
+      case params.user.oauth.providers.instagram.key:
+        userSocial = await instagram({ code })
         break
     }
 

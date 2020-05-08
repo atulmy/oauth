@@ -9,7 +9,7 @@ import './style.css'
 // App imports
 import { URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
-import { facebook, google } from 'setup/oauth/url'
+import { facebook, google, instagram } from 'setup/oauth/url'
 import AuthCheck from 'modules/common/AuthCheck'
 
 // Component
@@ -41,10 +41,12 @@ const Home = () => {
             />
           </a>
 
-          <Button
-            title='Instagram'
-            image={`${URL_WEB}/images/social/instagram.svg`}
-          />
+          <a href={instagram()}>
+            <Button
+              title='Instagram'
+              image={`${URL_WEB}/images/social/instagram.svg`}
+            />
+          </a>
         </div>
       </section>
 
