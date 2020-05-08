@@ -1,6 +1,6 @@
 # OAuth
 
-OAuth 2.0 examples for various providers in one place.
+OAuth 2.0 implementation for various providers in one place.
 
 This project contains OAuth 2.0 implementation for various providers and helps you understand of following OAuth 2.0 flow:
 
@@ -16,7 +16,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
 - [x] Facebook
 - [x] Google
-- [ ] Instagram
+- [x] Instagram
 
 ### Tech platforms
 
