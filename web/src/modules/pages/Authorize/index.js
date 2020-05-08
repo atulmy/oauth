@@ -8,8 +8,9 @@ import * as queryString from 'query-string'
 import './style.css'
 
 // App imports
-import routes from 'setup/routes'
+import { URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
+import routes from 'setup/routes'
 import {
   loginSetUser,
   loginSetUserLocalStorage,
@@ -40,8 +41,6 @@ const Authorize = ({ history, location }) => {
 
       try {
         const { data } = await authorize(query)
-
-        console.log(data.data)
 
         if (data && data.success && data.data) {
           const token = data.data.token
@@ -75,7 +74,10 @@ const Authorize = ({ history, location }) => {
 
       {/* content */}
       <section className='pages-authorize'>
-        <p>Authorizing...</p>
+        <p>
+          <img src={`${URL_WEB}/images/loader.gif`} alt='loading...' />{' '}
+          Authorizing...
+        </p>
       </section>
     </>
   )

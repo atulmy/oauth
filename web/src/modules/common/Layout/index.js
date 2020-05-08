@@ -1,11 +1,13 @@
 // Imports
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // UI imports
 import './style.css'
 
 // App imports
 import params from 'setup/config/params'
+import routes from 'setup/routes'
 
 // Component
 const Layout = ({ children }) => {
@@ -14,7 +16,9 @@ const Layout = ({ children }) => {
     <div className='common-layout'>
       {/* header */}
       <header>
-        <h2>{params.site.name}</h2>
+        <h2>
+          <Link to={routes.pagesHome.path}>{params.site.name}</Link>
+        </h2>
         <h5>{params.site.description}</h5>
       </header>
 

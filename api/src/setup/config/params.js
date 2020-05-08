@@ -24,6 +24,18 @@ export default {
   // user
   user: {
     oauth: {
+      providers: {
+        facebook: {
+          key: 'facebook',
+          title: 'Facebook',
+        },
+
+        google: {
+          key: 'google',
+          title: 'Google',
+        },
+      },
+
       redirectUri: 'authorize/',
     },
   },

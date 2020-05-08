@@ -1,21 +1,15 @@
 // Imports
-import axios from 'axios'
 import bcrypt from 'bcrypt'
-import moment from 'moment'
 
 // App imports
-import {
-  SECURITY_SALT_ROUNDS,
-  OAUTH_FACEBOOK_ID,
-  OAUTH_FACEBOOK_SECRET,
-  URL_WEB,
-} from 'setup/config/env'
+import { SECURITY_SALT_ROUNDS } from 'setup/config/env'
 import params from 'setup/config/params'
 import v from 'setup/helpers/validation'
 import { randomNumber } from 'setup/helpers/utils'
-import { AuthError, ValidationError } from 'modules/common/errors'
+import { ValidationError } from 'modules/common/errors'
 import User from 'modules/user/model'
 import authResponse from 'modules/user/query/authResponse'
+import facebook from './facebook'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -41,71 +35,51 @@ export default async function authorize({ params: { code, state } }) {
   }
 
   try {
+    let response = {
+      success: false,
+      message: `Unable to connect to ${params.user.oauth.providers.facebook.key}.`,
+      data: false,
+    }
+
+    let userSocial
+
     const stateParsed = JSON.parse(state)
 
-    // 1. get access_token account using OAuth code
-    const access = await axios({
-      url: 'https://graph.facebook.com/v6.0/oauth/access_token',
-      method: 'get',
-      params: {
-        client_id: OAUTH_FACEBOOK_ID,
-        client_secret: OAUTH_FACEBOOK_SECRET,
-        redirect_uri: `${URL_WEB}/${params.user.oauth.redirectUri}`,
-        code,
-      },
-    })
+    // get user details from the platform
+    switch (stateParsed.provider) {
+      case params.user.oauth.providers.facebook.key:
+        userSocial = await facebook({ code })
+        break
+    }
 
-    if (access.data && access.data.access_token) {
-      // 2. get user details
-      const me = await axios({
-        url: 'https://graph.facebook.com/me',
-        method: 'get',
-        params: {
-          fields: [
-            'id',
-            'email',
-            'first_name',
-            'last_name',
-            'picture.type(large)',
-          ].join(','),
-          access_token: access.data.access_token,
-        },
-      })
+    // console.log('userSocial', userSocial)
 
-      if (me.data && me.data.id) {
-        // 3. check user already exists
-        let user = await User.findOne({ email: me.data.email })
+    if (userSocial) {
+      // check user already exists
+      let user = await User.findOne({ email: userSocial.email })
 
-        if (!user) {
-          // 4. create new user
+      // create new user
+      if (!user) {
+        // create new password
+        const password = randomNumber(100000, 999999)
 
-          // create new password
-          const password = randomNumber(100000, 999999)
-
-          // User - create
-          user = await User.create({
-            email: me.data.email,
-            password: await bcrypt.hash(`${password}`, SECURITY_SALT_ROUNDS),
-            name: `${me.data.first_name} ${me.data.last_name}`,
-          })
-        }
-
-        return {
-          data: await authResponse(user),
-          message: `Welcome ${user.name}!`,
-        }
+        // User - create
+        user = await User.create({
+          email: userSocial.email,
+          name: userSocial.name,
+          password: await bcrypt.hash(`${password}`, SECURITY_SALT_ROUNDS),
+        })
       }
+
+      // create JWT auth token
+      response.success = true
+      response.message = `Welcome ${user.name}!`
+      response.data = await authResponse(user)
     }
 
-    return {
-      data: false,
-      success: false,
-      message: `Unable to connect to ${params.user.oauth.providers.facebook.title}.`,
-    }
+    return response
   } catch (error) {
-    // console.log(error)
+    console.log(error)
     throw new Error(`An error occurred. ${error.message}`)
   }
-
-  throw new AuthError('You are not authorized to perform this action.')
 }

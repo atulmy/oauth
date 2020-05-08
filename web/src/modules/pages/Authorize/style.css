@@ -1,5 +1,14 @@
 .pages-authorize {
   display: flex;
   flex-direction: row;
-  flex: 1;
+}
+
+.pages-authorize > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-dark);
+}
+.pages-authorize > p > img {
+  margin-right: 0.5rem;
 }

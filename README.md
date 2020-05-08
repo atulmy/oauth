@@ -30,9 +30,9 @@ Although this project uses React in the frontend and NodeJS in backend, the flow
 ### Facebook
 
 1. Read official flow https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow
-2. Create a new application https://developers.facebook.com
+2. Create a new application https://developers.facebook.com/apps/
 3. Goto **App → Add Product** and choose Facebook Login
-4. Goto **App → Products → Facebook Login → Settings** and add a `Valid OAuth Redirect URI` as `https://example.com/authorize` (replace your actual domain for live)
+4. Goto **App → Products → Facebook Login → Settings** and add a `Valid OAuth Redirect URI` as `https://example.com/authorize/` (replace your actual domain for live)
 5. Goto **App → Settings** and copy `App ID` and `App Secret`
 6. Update `web/.env.local` `REACT_APP_OAUTH_FACEBOOK_ID` with `App ID`
 7. Update `api/.env.local` `OAUTH_FACEBOOK_ID` with `App ID`
