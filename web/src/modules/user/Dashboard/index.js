@@ -1,7 +1,7 @@
 // Imports
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 // UI imports
 import './style.css'
@@ -13,6 +13,8 @@ import Button from 'ui/Button'
 
 // Component
 const Dashboard = () => {
+  // state
+  const { user } = useSelector((state) => state.auth)
   const dispatch = useDispatch()
 
   // on logout
@@ -34,7 +36,7 @@ const Dashboard = () => {
 
       {/* content */}
       <section className='user-dashboard'>
-        <p>Welcome USER!</p>
+        <p>Welcome {user && user.name}!</p>
 
         <aside>
           <Button title='Logout' onClick={onLogout} />

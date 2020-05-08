@@ -9,7 +9,7 @@ import './style.css'
 // App imports
 import { URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
-import { facebook } from 'setup/oauth/url'
+import { facebook, google } from 'setup/oauth/url'
 import AuthCheck from 'modules/common/AuthCheck'
 
 // Component
@@ -34,10 +34,12 @@ const Home = () => {
             />
           </a>
 
-          <Button
-            title='Google'
-            image={`${URL_WEB}/images/social/google.svg`}
-          />
+          <a href={google()}>
+            <Button
+              title='Google'
+              image={`${URL_WEB}/images/social/google.svg`}
+            />
+          </a>
 
           <Button
             title='Instagram'

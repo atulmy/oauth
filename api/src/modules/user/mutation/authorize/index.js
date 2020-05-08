@@ -10,6 +10,7 @@ import { ValidationError } from 'modules/common/errors'
 import User from 'modules/user/model'
 import authResponse from 'modules/user/query/authResponse'
 import facebook from './facebook'
+import google from './google'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -49,6 +50,10 @@ export default async function authorize({ params: { code, state } }) {
     switch (stateParsed.provider) {
       case params.user.oauth.providers.facebook.key:
         userSocial = await facebook({ code })
+        break
+
+      case params.user.oauth.providers.google.key:
+        userSocial = await google({ code })
         break
     }
 

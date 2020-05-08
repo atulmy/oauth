@@ -2,25 +2,22 @@
 import axios from 'axios'
 
 // App imports
-import {
-  OAUTH_FACEBOOK_ID,
-  OAUTH_FACEBOOK_SECRET,
-  URL_WEB,
-} from 'setup/config/env'
+import { OAUTH_GOOGLE_ID, OAUTH_GOOGLE_SECRET, URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
 
-// facebook
-export default async function facebook({ code }) {
+// google
+export default async function google({ code }) {
   let userSocial
 
   // 1. get access_token account using OAuth code
   const access = await axios({
-    url: 'https://graph.facebook.com/v6.0/oauth/access_token',
-    method: 'get',
-    params: {
-      client_id: OAUTH_FACEBOOK_ID,
-      client_secret: OAUTH_FACEBOOK_SECRET,
+    url: `https://oauth2.googleapis.com/token`,
+    method: 'post',
+    data: {
+      client_id: OAUTH_GOOGLE_ID,
+      client_secret: OAUTH_GOOGLE_SECRET,
       redirect_uri: `${URL_WEB}/${params.user.oauth.redirectUri}`,
+      grant_type: 'authorization_code',
       code,
     },
   })
@@ -28,11 +25,10 @@ export default async function facebook({ code }) {
   // 2. get user details
   if (access.data && access.data.access_token) {
     const me = await axios({
-      url: 'https://graph.facebook.com/me',
+      url: 'https://www.googleapis.com/oauth2/v2/userinfo',
       method: 'get',
-      params: {
-        fields: ['id', 'email', 'name'].join(','),
-        access_token: access.data.access_token,
+      headers: {
+        Authorization: `Bearer ${access.data.access_token}`,
       },
     })
 
