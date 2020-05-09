@@ -150,9 +150,9 @@ Although this project is build using React for frontend and NodeJS for backend, 
 3. Under `Permissions → Account` check `Email` and `Read`
 4. Click on `Save` button
 5. Click on **Name** of your application and copy `Key` and `Secret`
-6. Update `web/.env.local` `REACT_APP_OAUTH_DIGITALOCEAN_ID` with `Client ID`
-7. Update `api/.env.local` `OAUTH_DIGITALOCEAN_ID` with `Client ID`
-8. Update `api/.env.local` `OAUTH_DIGITALOCEAN_SECRET` with `Client Secret`
+6. Update `web/.env.local` `REACT_APP_OAUTH_BITBUCKET_ID` with `Key`
+7. Update `api/.env.local` `OAUTH_BITBUCKET_ID` with `Key`
+8. Update `api/.env.local` `OAUTH_BITBUCKET_SECRET` with `Secret`
 
 ## Core Structure
 
