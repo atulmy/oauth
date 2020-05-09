@@ -16,6 +16,7 @@ import instagram from 'setup/oauth/instagram'
 import github from 'setup/oauth/github'
 import gitlab from 'setup/oauth/gitlab'
 import digitalocean from 'setup/oauth/digitalocean'
+import bitbucket from 'setup/oauth/bitbucket'
 
 // Component
 const Home = () => {
@@ -71,6 +72,13 @@ const Home = () => {
             <Button
               title='DigitalOcean'
               image={`${URL_WEB}/images/tech/digitalocean.svg`}
+            />
+          </a>
+
+          <a href={bitbucket()}>
+            <Button
+              title='Bitbucket'
+              image={`${URL_WEB}/images/tech/bitbucket.svg`}
             />
           </a>
         </div>

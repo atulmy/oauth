@@ -25,6 +25,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 - [x] [GitHub](#github)
 - [x] [GitLab](#gitLab)
 - [x] [DigitalOcean](#digitalocean)
+- [x] [Bitbucket](#bitbucket)
 
 ## Docs
 
@@ -128,10 +129,30 @@ Although this project is build using React for frontend and NodeJS for backend, 
    4. `Authorization callback URL`:
       1. For development, enter `http://localhost:3000/authorize/`
       2. For production, enter `https://example.com/authorize/`
-3. Click on **More → View** and copy `Client ID` and `Client Secret`
-4. Update `web/.env.local` `REACT_APP_OAUTH_DIGITALOCEAN_ID` with `Client ID`
-5. Update `api/.env.local` `OAUTH_DIGITALOCEAN_ID` with `Client ID`
-6. Update `api/.env.local` `OAUTH_DIGITALOCEAN_SECRET` with `Client Secret`
+3. Click on `Save` button
+4. Click on **More → View** and copy `Client ID` and `Client Secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_DIGITALOCEAN_ID` with `Client ID`
+6. Update `api/.env.local` `OAUTH_DIGITALOCEAN_ID` with `Client ID`
+7. Update `api/.env.local` `OAUTH_DIGITALOCEAN_SECRET` with `Client Secret`
+
+---
+
+### Bitbucket
+
+1. Read official flow: https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html
+2. Create a new OAuth application: https://bitbucket.org/<username>/workspace/settings/oauth-consumers/new and fill in following:
+   1. `Name` enter your application name, eg: `Example`
+   2. `Homepage URL` enter your website url, eg: `https://example.com`
+   3. `Description` enter info about your app, eg: `OAuth example application`
+   4. `Callback URL`:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Under `Permissions → Account` check `Email` and `Read`
+4. Click on `Save` button
+5. Click on **Name** of your application and copy `Key` and `Secret`
+6. Update `web/.env.local` `REACT_APP_OAUTH_DIGITALOCEAN_ID` with `Client ID`
+7. Update `api/.env.local` `OAUTH_DIGITALOCEAN_ID` with `Client ID`
+8. Update `api/.env.local` `OAUTH_DIGITALOCEAN_SECRET` with `Client Secret`
 
 ## Core Structure
 

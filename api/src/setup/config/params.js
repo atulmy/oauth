@@ -54,6 +54,11 @@ export default {
           key: 'digitalocean',
           title: 'DigitalOcean',
         },
+
+        bitbucket: {
+          key: 'bitbucket',
+          title: 'Bitbucket',
+        },
       },
 
       redirectUri: 'authorize/',
