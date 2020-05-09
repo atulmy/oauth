@@ -37,6 +37,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
 7. Update `api/.env.local` `OAUTH_FACEBOOK_ID` with `App ID`
 8. Update `api/.env.local` `OAUTH_FACEBOOK_SECRET` with `App Secret`
 
+----
+
 ### Google
 
 1. Read official flow: https://developers.google.com/identity/protocols/oauth2/web-server
@@ -56,6 +58,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
 6. Update `web/.env.local` `REACT_APP_OAUTH_GOOGLE_ID` with `Your Client ID`
 7. Update `api/.env.local` `OAUTH_GOOGLE_ID` with `Your Client ID`
 8. Update `api/.env.local` `OAUTH_GOOGLE_SECRET` with `Your Client Secret`
+
+----
 
 ### Instagram
 
@@ -78,6 +82,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
     1. As of writing this Readme, Instagram does not accept `localhost:3000` as valid callback URI. So while testing, you may need to manually change the callback URL.
     2. For production, you need to complete `App Review for Instagram Basic Display` by submitting `instagram_graph_user_profile` and `instagram_graph_user_media` for review.
+
+----
 
 ### GitHub
 
