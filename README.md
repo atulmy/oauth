@@ -21,7 +21,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 ### Tech platforms
 
 - [x] [GitHub](#github)
-- [ ] GitLab
+- [x] GitLab
 - [ ] DigitalOcean
 
 ## Docs
