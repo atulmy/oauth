@@ -36,3 +36,6 @@ export const OAUTH_GITHUB_SECRET = process.env.OAUTH_GITHUB_SECRET
 
 export const OAUTH_GITLAB_ID = process.env.OAUTH_GITLAB_ID
 export const OAUTH_GITLAB_SECRET = process.env.OAUTH_GITLAB_SECRET
+
+export const OAUTH_DIGITALOCEAN_ID = process.env.OAUTH_DIGITALOCEAN_ID
+export const OAUTH_DIGITALOCEAN_SECRET = process.env.OAUTH_DIGITALOCEAN_SECRET

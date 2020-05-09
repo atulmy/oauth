@@ -36,6 +36,11 @@ export default {
           key: 'gitlab',
           title: 'Gitlab',
         },
+
+        digitalocean: {
+          key: 'digitalocean',
+          title: 'DigitalOcean',
+        },
       },
     },
   },

@@ -21,8 +21,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
 ### Tech platforms
 
 - [x] [GitHub](#github)
-- [x] GitLab
-- [ ] DigitalOcean
+- [x] [GitLab](#gitLab)
+- [x] [DigitalOcean](#digitalocean)
 
 ## Docs
 
@@ -114,8 +114,95 @@ Although this project is build using React for frontend and NodeJS for backend, 
 6. Update `api/.env.local` `OAUTH_GITLAB_ID` with `Application ID`
 7. Update `api/.env.local` `OAUTH_GITLAB_SECRET` with `Secret`
 
+---
+
+### DigitalOcean
+
+1. Read official flow: https://docs.gitlab.com/ee/api/oauth2.html#web-application-flow
+2. Create a new OAuth application: https://cloud.digitalocean.com/account/api/applications/new and fill in following:
+   1. `Name` enter your application name, eg: `Example`
+   2. `Homepage URL` enter your website url, eg: `https://example.com`
+   3. `Description` enter info about your app, eg: `OAuth example application`
+   4. `Authorization callback URL`:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Click on **More → View** and copy `Client ID` and `Client Secret`
+4. Update `web/.env.local` `REACT_APP_OAUTH_DIGITALOCEAN_ID` with `Client ID`
+5. Update `api/.env.local` `OAUTH_DIGITALOCEAN_ID` with `Client ID`
+6. Update `api/.env.local` `OAUTH_DIGITALOCEAN_SECRET` with `Client Secret`
+
+## Core Structure
+
+    oauth
+      ├── api
+      │   > PORT 4000
+      │   > localhost:4000
+      │   > api.example.com
+      │
+      ├── web
+      │   > PORT 3000
+      │   > localhost:3000
+      │   > example.com
+      │
+      └── README.md (you are here)
+
+## Setup and Running
+
+- **Prerequisites**
+
+  - Node (`v12.x`)
+  - MongoDB (`v4.x`)
+  - IDE (Webstorm / Visual Studio Code)
+
+- Clone repository `git clone git@github.com:atulmy/oauth.git oauth`
+
+- **API**
+
+  - Switch to `api` directory `cd oauth/api`
+  - Configuration
+    - Create local environment file `cp .env.dev .env.local`
+    - Edit `.env.local` for `SECURITY_SECRET`, `DATABASE_URL` and `OAUTH_..` values
+  - Setup
+    - Install packages `npm install`
+  - Run
+    - Start API server: `npm start` (http://localhost:4000)
+
+- **Web**
+  - Switch to `web` directory `cd oauth/web`
+  - Configuration
+    - Create local environment file `cp .env.dev .env.local`
+    - Edit `.env.local` for `REACT_APP_OAUTH_..` values
+  - Setup
+    - Install packages `npm install`
+  - Run
+    - Start web server: `npm start` (http://localhost:3000)
+
 ## Contribution
 
 Found an integration not working? Open an issue / Send a Pull Request with fixes.
 
 Looking for a particular OAuth integration not yet added? Open an issue / Send a Pull Request with additional integrations.
+
+## Authors
+
+- Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
+
+## Collaborators
+
+- [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
+
+## Hire me
+
+Looking for a developer to build your next idea or need a developer to work remotely? Get in touch: [atul.12788@gmail.com](mailto:atul.12788@gmail.com)
+
+## Donate
+
+If you liked this project, you can donate to support it ❤️
+
+[![Donate via PayPal](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/mix/paypal-me-smaller.png)](http://paypal.me/atulmy)
+
+## License
+
+Copyright (c) 2020 Atul Yadav http://github.com/atulmy
+
+The MIT License (http://www.opensource.org/licenses/mit-license.php)

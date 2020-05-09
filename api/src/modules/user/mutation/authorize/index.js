@@ -14,6 +14,7 @@ import google from './google'
 import instagram from './instagram'
 import github from './github'
 import gitlab from './gitlab'
+import digitalocean from './digitalocean'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -74,6 +75,11 @@ export default async function authorize({ params: { code, state } }) {
       // gitlab
       case params.user.oauth.providers.gitlab.key:
         userProvider = await gitlab({ code })
+        break
+
+      // digitalocean
+      case params.user.oauth.providers.digitalocean.key:
+        userProvider = await digitalocean({ code })
         break
     }
 

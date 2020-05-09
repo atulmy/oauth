@@ -15,6 +15,7 @@ import google from 'setup/oauth/google'
 import instagram from 'setup/oauth/instagram'
 import github from 'setup/oauth/github'
 import gitlab from 'setup/oauth/gitlab'
+import digitalocean from 'setup/oauth/digitalocean'
 
 // Component
 const Home = () => {
@@ -66,7 +67,7 @@ const Home = () => {
             />
           </a>
 
-          <a href={instagram()}>
+          <a href={digitalocean()}>
             <Button
               title='DigitalOcean'
               image={`${URL_WEB}/images/tech/digitalocean.svg`}
