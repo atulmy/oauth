@@ -37,7 +37,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 7. Update `api/.env.local` `OAUTH_FACEBOOK_ID` with `App ID`
 8. Update `api/.env.local` `OAUTH_FACEBOOK_SECRET` with `App Secret`
 
-----
+---
 
 ### Google
 
@@ -59,7 +59,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 7. Update `api/.env.local` `OAUTH_GOOGLE_ID` with `Your Client ID`
 8. Update `api/.env.local` `OAUTH_GOOGLE_SECRET` with `Your Client Secret`
 
-----
+---
 
 ### Instagram
 
@@ -83,7 +83,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
     1. As of writing this Readme, Instagram does not accept `localhost:3000` as valid callback URI. So while testing, you may need to manually change the callback URL.
     2. For production, you need to complete `App Review for Instagram Basic Display` by submitting `instagram_graph_user_profile` and `instagram_graph_user_media` for review.
 
-----
+---
 
 ### GitHub
 
@@ -92,12 +92,27 @@ Although this project is build using React for frontend and NodeJS for backend, 
    1. `Application name` enter your application name, eg: `Example`
    2. `Homepage URL` enter your website url, eg: `https://example.com`
    3. `Authorization callback URL`:
-      1. For development, enter `http://localhost:3000/authorize`
-      2. For production, enter `https://example.com/authorize`
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
 3. Copy `Client ID` and `Client Secret`
 4. Update `web/.env.local` `REACT_APP_OAUTH_GITHUB_ID` with `Client ID`
 5. Update `api/.env.local` `OAUTH_GITHUB_ID` with `Client ID`
 6. Update `api/.env.local` `OAUTH_GITHUB_SECRET` with `Client Secret`
+
+---
+
+### GitLab
+
+1. Read official flow: https://docs.gitlab.com/ee/api/oauth2.html#web-application-flow
+2. Create a new OAuth application: https://gitlab.com/profile/applications and fill in following:
+   1. `Name` enter your application name, eg: `Example`
+   2. `Homepage URL` enter your website url, eg: `https://example.com`
+   3. `Authorization callback URL` enter `http://localhost:3000/authorize/` and on new line `https://example.com/authorize/`
+3. For `Scopes` check `read_user`, `profile` and `email`
+4. Click on `Save application` button and copy `Application ID` and `Secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_GITLAB_ID` with `Application ID`
+6. Update `api/.env.local` `OAUTH_GITLAB_ID` with `Application ID`
+7. Update `api/.env.local` `OAUTH_GITLAB_SECRET` with `Secret`
 
 ## Contribution
 

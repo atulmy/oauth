@@ -14,6 +14,7 @@ import facebook from 'setup/oauth/facebook'
 import google from 'setup/oauth/google'
 import instagram from 'setup/oauth/instagram'
 import github from 'setup/oauth/github'
+import gitlab from 'setup/oauth/gitlab'
 
 // Component
 const Home = () => {
@@ -58,7 +59,7 @@ const Home = () => {
             />
           </a>
 
-          <a href={instagram()}>
+          <a href={gitlab()}>
             <Button
               title='GitLab'
               image={`${URL_WEB}/images/tech/gitlab.svg`}

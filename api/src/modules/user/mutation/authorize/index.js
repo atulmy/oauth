@@ -13,6 +13,7 @@ import facebook from './facebook'
 import google from './google'
 import instagram from './instagram'
 import github from './github'
+import gitlab from './gitlab'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -69,9 +70,12 @@ export default async function authorize({ params: { code, state } }) {
       case params.user.oauth.providers.github.key:
         userProvider = await github({ code })
         break
-    }
 
-    // console.log('userProvider', userProvider)
+      // gitlab
+      case params.user.oauth.providers.gitlab.key:
+        userProvider = await gitlab({ code })
+        break
+    }
 
     if (userProvider) {
       // check user already exists

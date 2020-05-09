@@ -33,3 +33,6 @@ export const OAUTH_INSTAGRAM_SECRET = process.env.OAUTH_INSTAGRAM_SECRET
 
 export const OAUTH_GITHUB_ID = process.env.OAUTH_GITHUB_ID
 export const OAUTH_GITHUB_SECRET = process.env.OAUTH_GITHUB_SECRET
+
+export const OAUTH_GITLAB_ID = process.env.OAUTH_GITLAB_ID
+export const OAUTH_GITLAB_SECRET = process.env.OAUTH_GITLAB_SECRET

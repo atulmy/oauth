@@ -32,8 +32,6 @@ const Authorize = ({ history, location }) => {
   const process = async () => {
     const query = queryString.parse(location.search)
 
-    console.log(query)
-
     if (query.code && query.state) {
       setIsAuthorizing(true)
 

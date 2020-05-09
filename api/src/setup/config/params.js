@@ -44,6 +44,11 @@ export default {
           key: 'github',
           title: 'Github',
         },
+
+        gitlab: {
+          key: 'gitlab',
+          title: 'Gitlab',
+        },
       },
 
       redirectUri: 'authorize/',
