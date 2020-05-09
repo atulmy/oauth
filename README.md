@@ -10,6 +10,8 @@ This project contains OAuth 2.0 implementation for various providers and helps y
 
 Although this project is build using React for frontend and NodeJS for backend, the flow and implementation largely remains same for any other language or framework.
 
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/preview.png" alt="OAuth" />
+
 ## Integrations
 
 ### Social platforms
