@@ -9,8 +9,11 @@ import './style.css'
 // App imports
 import { URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
-import { facebook, google, instagram } from 'setup/oauth/url'
 import AuthCheck from 'modules/common/AuthCheck'
+import facebook from 'setup/oauth/facebook'
+import google from 'setup/oauth/google'
+import instagram from 'setup/oauth/instagram'
+import github from 'setup/oauth/github'
 
 // Component
 const Home = () => {
@@ -24,7 +27,7 @@ const Home = () => {
 
       {/* content */}
       <section className='pages-home'>
-        <p>Welcome! Sign in with:</p>
+        <p>Welcome guest! Sign in with:</p>
 
         <div className='cta'>
           <a href={facebook()}>
@@ -45,6 +48,27 @@ const Home = () => {
             <Button
               title='Instagram'
               image={`${URL_WEB}/images/social/instagram.svg`}
+            />
+          </a>
+
+          <a href={github()}>
+            <Button
+              title='GitHub'
+              image={`${URL_WEB}/images/tech/github.svg`}
+            />
+          </a>
+
+          <a href={instagram()}>
+            <Button
+              title='GitLab'
+              image={`${URL_WEB}/images/tech/gitlab.svg`}
+            />
+          </a>
+
+          <a href={instagram()}>
+            <Button
+              title='DigitalOcean'
+              image={`${URL_WEB}/images/tech/digitalocean.svg`}
             />
           </a>
         </div>

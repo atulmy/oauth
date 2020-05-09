@@ -7,7 +7,7 @@ import params from 'setup/config/params'
 
 // google
 export default async function google({ code }) {
-  let userSocial
+  let userProvider
 
   // 1. get access_token account using OAuth code
   const access = await axios({
@@ -33,12 +33,12 @@ export default async function google({ code }) {
     })
 
     if (me.data && me.data.id) {
-      userSocial = {
+      userProvider = {
         email: me.data.email,
         name: me.data.name,
       }
     }
   }
 
-  return userSocial
+  return userProvider
 }

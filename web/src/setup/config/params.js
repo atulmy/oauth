@@ -26,6 +26,11 @@ export default {
           key: 'instagram',
           title: 'Instagram',
         },
+
+        github: {
+          key: 'github',
+          title: 'Github',
+        },
       },
     },
   },

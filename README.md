@@ -20,7 +20,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
 ### Tech platforms
 
-- [ ] GitHub
+- [x] [GitHub](#github)
 - [ ] GitLab
 - [ ] DigitalOcean
 
@@ -75,8 +75,23 @@ Although this project is build using React for frontend and NodeJS for backend, 
 11. Update `api/.env.local` `OAUTH_INSTAGRAM_ID` with `Instagram App ID`
 12. Update `api/.env.local` `OAUTH_INSTAGRAM_SECRET` with `Instagram App Secret`
 13. Note:
+
     1. As of writing this Readme, Instagram does not accept `localhost:3000` as valid callback URI. So while testing, you may need to manually change the callback URL.
     2. For production, you need to complete `App Review for Instagram Basic Display` by submitting `instagram_graph_user_profile` and `instagram_graph_user_media` for review.
+
+### GitHub
+
+1. Read official flow: https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps
+2. Create a new OAuth application: https://github.com/settings/applications/new and fill in following:
+   1. `Application name` enter your application name, eg: `Example`
+   2. `Homepage URL` enter your website url, eg: `https://example.com`
+   3. `Authorization callback URL`:
+      1. For development, enter `http://localhost:3000/authorize`
+      2. For production, enter `https://example.com/authorize`
+3. Copy `Client ID` and `Client Secret`
+4. Update `web/.env.local` `REACT_APP_OAUTH_GITHUB_ID` with `Client ID`
+5. Update `api/.env.local` `OAUTH_GITHUB_ID` with `Client ID`
+6. Update `api/.env.local` `OAUTH_GITHUB_SECRET` with `Client Secret`
 
 ## Contribution
 

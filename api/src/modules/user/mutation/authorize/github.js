@@ -2,24 +2,21 @@
 import axios from 'axios'
 
 // App imports
-import {
-  OAUTH_FACEBOOK_ID,
-  OAUTH_FACEBOOK_SECRET,
-  URL_WEB,
-} from 'setup/config/env'
+import { OAUTH_GITHUB_ID, OAUTH_GITHUB_SECRET, URL_WEB } from 'setup/config/env'
 import params from 'setup/config/params'
 
-// facebook
-export default async function facebook({ code }) {
+// github
+export default async function github({ code }) {
   let userProvider
 
   // 1. get access_token account using OAuth code
   const access = await axios({
-    url: 'https://graph.facebook.com/v6.0/oauth/access_token',
+    url: 'https://github.com/login/oauth/access_token',
     method: 'get',
+    headers: { accept: 'application/json' },
     params: {
-      client_id: OAUTH_FACEBOOK_ID,
-      client_secret: OAUTH_FACEBOOK_SECRET,
+      client_id: OAUTH_GITHUB_ID,
+      client_secret: OAUTH_GITHUB_SECRET,
       redirect_uri: `${URL_WEB}/${params.user.oauth.redirectUri}`,
       code,
     },
@@ -28,11 +25,11 @@ export default async function facebook({ code }) {
   // 2. get user details
   if (access.data && access.data.access_token) {
     const me = await axios({
-      url: 'https://graph.facebook.com/me',
+      url: 'https://api.github.com/user',
       method: 'get',
-      params: {
-        fields: ['id', 'email', 'name'].join(','),
-        access_token: access.data.access_token,
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `token ${access.data.access_token}`,
       },
     })
 

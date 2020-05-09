@@ -11,7 +11,7 @@ import params from 'setup/config/params'
 
 // instagram
 export default async function instagram({ code }) {
-  let userSocial
+  let userProvider
 
   // 1. get (short lived) access_token account using OAuth code
   const form = new URLSearchParams()
@@ -55,12 +55,12 @@ export default async function instagram({ code }) {
     })
 
     if (me.data && me.data.id) {
-      userSocial = {
+      userProvider = {
         email: `${me.data.username}@instagram.com`, // Instagram does not return `email` field
         name: me.data.username,
       }
     }
   }
 
-  return userSocial
+  return userProvider
 }

@@ -12,6 +12,7 @@ import authResponse from 'modules/user/query/authResponse'
 import facebook from './facebook'
 import google from './google'
 import instagram from './instagram'
+import github from './github'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -39,34 +40,42 @@ export default async function authorize({ params: { code, state } }) {
   try {
     let response = {
       success: false,
-      message: `Unable to connect to ${params.user.oauth.providers.facebook.key}.`,
+      message: `Unable to connect.`,
       data: false,
     }
 
-    let userSocial
+    let userProvider
 
     const stateParsed = JSON.parse(state)
 
     // get user details from the platform
     switch (stateParsed.provider) {
+      // facebook
       case params.user.oauth.providers.facebook.key:
-        userSocial = await facebook({ code })
+        userProvider = await facebook({ code })
         break
 
+      // google
       case params.user.oauth.providers.google.key:
-        userSocial = await google({ code })
+        userProvider = await google({ code })
         break
 
+      // instagram
       case params.user.oauth.providers.instagram.key:
-        userSocial = await instagram({ code })
+        userProvider = await instagram({ code })
+        break
+
+      // github
+      case params.user.oauth.providers.github.key:
+        userProvider = await github({ code })
         break
     }
 
-    // console.log('userSocial', userSocial)
+    // console.log('userProvider', userProvider)
 
-    if (userSocial) {
+    if (userProvider) {
       // check user already exists
-      let user = await User.findOne({ email: userSocial.email })
+      let user = await User.findOne({ email: userProvider.email })
 
       // create new user
       if (!user) {
@@ -75,8 +84,8 @@ export default async function authorize({ params: { code, state } }) {
 
         // User - create
         user = await User.create({
-          email: userSocial.email,
-          name: userSocial.name,
+          email: userProvider.email,
+          name: userProvider.name,
           password: await bcrypt.hash(`${password}`, SECURITY_SALT_ROUNDS),
         })
       }
