@@ -91,6 +91,24 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
 ---
 
+### Reddit
+
+1. Read official flow: https://github.com/reddit-archive/reddit/wiki/OAuth2
+2. Create a new OAuth application: https://www.reddit.com/prefs/apps and fill in following:
+   1. `name` enter your application name, eg: `Example`
+   2. `description` enter info about your app, eg: `OAuth example application`
+   3. `about url` enter your website url, eg: `https://example.com`
+   4. `redirect uri`:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Click on `create app` button
+4. Copy `id` (below the entered app name) and `secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `id`
+6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `id`
+7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `secret`
+
+---
+
 ### GitHub
 
 1. Read official flow: https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps
@@ -156,24 +174,6 @@ Although this project is build using React for frontend and NodeJS for backend, 
 6. Update `web/.env.local` `REACT_APP_OAUTH_BITBUCKET_ID` with `Key`
 7. Update `api/.env.local` `OAUTH_BITBUCKET_ID` with `Key`
 8. Update `api/.env.local` `OAUTH_BITBUCKET_SECRET` with `Secret`
-
----
-
-### Reddit
-
-1. Read official flow: https://github.com/reddit-archive/reddit/wiki/OAuth2
-2. Create a new OAuth application: https://www.reddit.com/prefs/apps and fill in following:
-   1. `name` enter your application name, eg: `Example`
-   2. `description` enter info about your app, eg: `OAuth example application`
-   3. `about url` enter your website url, eg: `https://example.com`
-   4. `redirect uri`:
-      1. For development, enter `http://localhost:3000/authorize/`
-      2. For production, enter `https://example.com/authorize/`
-3. Click on `create app` button
-4. Copy `id` (below the entered app name) and `secret`
-5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `id`
-6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `id`
-7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `secret`
 
 ## Core Structure
 
