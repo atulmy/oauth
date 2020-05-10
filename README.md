@@ -258,7 +258,7 @@ Looking for a developer to build your next idea or need a developer to work remo
 
 ## Donate
 
-If you liked this project, you can donate to support it ❤️
+If you liked this project, consider donating to support it ❤️
 
 [![Donate via PayPal](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/mix/paypal-me-smaller.png)](http://paypal.me/atulmy)
 
