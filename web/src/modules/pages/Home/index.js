@@ -55,6 +55,13 @@ const Home = () => {
             />
           </a>
 
+          <a href={reddit()}>
+            <Button
+              title='Reddit'
+              image={`${URL_WEB}/images/social/reddit.svg`}
+            />
+          </a>
+
           <a href={github()}>
             <Button
               title='GitHub'
@@ -80,13 +87,6 @@ const Home = () => {
             <Button
               title='Bitbucket'
               image={`${URL_WEB}/images/tech/bitbucket.svg`}
-            />
-          </a>
-
-          <a href={reddit()}>
-            <Button
-              title='Reddit'
-              image={`${URL_WEB}/images/tech/reddit.svg`}
             />
           </a>
         </div>
