@@ -206,6 +206,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
       │
       └── README.md (you are here)
 
+[↑ back to top](#oauth)
+
 ## Setup and Running
 
 - **Prerequisites**
@@ -237,6 +239,8 @@ Although this project is build using React for frontend and NodeJS for backend, 
   - Run
     - Start web server: `npm start` (http://localhost:3000)
 
+[↑ back to top](#oauth)
+
 ## Contribution
 
 Found an integration not working? Open an issue / Send a Pull Request with fixes.
@@ -246,9 +250,6 @@ Looking for a particular OAuth integration not yet added? Open an issue / Send a
 ## Authors
 
 - Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
-
-## Collaborators
-
 - [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
 
 ## Hire me
