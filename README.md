@@ -2,6 +2,15 @@
 
 OAuth 2.0 implementation for various providers in one place.
 
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" />
+
 This project contains OAuth 2.0 implementation for various providers and helps you understand of following OAuth 2.0 flow:
 
 1. Show platform dialog
@@ -19,6 +28,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 - [x] [Facebook](#facebook)
 - [x] [Google](#google)
 - [x] [Instagram](#instagram)
+- [x] [Reddit](#reddit)
 
 ### Tech platforms
 
@@ -140,7 +150,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 ### Bitbucket
 
 1. Read official flow: https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html
-2. Create a new OAuth application: https://bitbucket.org/<username>/workspace/settings/oauth-consumers/new and fill in following:
+2. Create a new OAuth application: https://bitbucket.org/USERNAME/workspace/settings/oauth-consumers/new and fill in following:
    1. `Name` enter your application name, eg: `Example`
    2. `Homepage URL` enter your website url, eg: `https://example.com`
    3. `Description` enter info about your app, eg: `OAuth example application`
@@ -153,6 +163,24 @@ Although this project is build using React for frontend and NodeJS for backend, 
 6. Update `web/.env.local` `REACT_APP_OAUTH_BITBUCKET_ID` with `Key`
 7. Update `api/.env.local` `OAUTH_BITBUCKET_ID` with `Key`
 8. Update `api/.env.local` `OAUTH_BITBUCKET_SECRET` with `Secret`
+
+---
+
+### Reddit
+
+1. Read official flow: https://github.com/reddit-archive/reddit/wiki/OAuth2
+2. Create a new OAuth application: https://www.reddit.com/prefs/apps and fill in following:
+   1. `name` enter your application name, eg: `Example`
+   2. `description` enter info about your app, eg: `OAuth example application`
+   3. `about url` enter your website url, eg: `https://example.com`
+   4. `redirect uri`:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Click on `create app` button
+4. Copy `id` (below the entered app name) and `secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `id`
+6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `id`
+7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `secret`
 
 ## Core Structure
 

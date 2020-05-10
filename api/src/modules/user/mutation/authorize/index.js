@@ -16,6 +16,7 @@ import github from './github'
 import gitlab from './gitlab'
 import digitalocean from './digitalocean'
 import bitbucket from './bitbucket'
+import reddit from './reddit'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -86,6 +87,11 @@ export default async function authorize({ params: { code, state } }) {
       // digitalocean
       case params.user.oauth.providers.bitbucket.key:
         userProvider = await bitbucket({ code })
+        break
+
+      // reddit
+      case params.user.oauth.providers.reddit.key:
+        userProvider = await reddit({ code })
         break
     }
 

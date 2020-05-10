@@ -59,6 +59,11 @@ export default {
           key: 'bitbucket',
           title: 'Bitbucket',
         },
+
+        reddit: {
+          key: 'reddit',
+          title: 'Reddit',
+        },
       },
 
       redirectUri: 'authorize/',

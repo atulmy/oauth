@@ -42,3 +42,6 @@ export const OAUTH_DIGITALOCEAN_SECRET = process.env.OAUTH_DIGITALOCEAN_SECRET
 
 export const OAUTH_BITBUCKET_ID = process.env.OAUTH_BITBUCKET_ID
 export const OAUTH_BITBUCKET_SECRET = process.env.OAUTH_BITBUCKET_SECRET
+
+export const OAUTH_REDDIT_ID = process.env.OAUTH_REDDIT_ID
+export const OAUTH_REDDIT_SECRET = process.env.OAUTH_REDDIT_SECRET
