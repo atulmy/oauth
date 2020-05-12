@@ -124,12 +124,12 @@ Although this project is build using React for frontend and NodeJS for backend, 
 2. Create a new OAuth application: https://discord.com/developers/applications and click on `New Application`
 3. Fill in `name`, eg: `Example` and click on `Create` button
 4. Go to application's OAuth section https://discord.com/developers/applications/CLIENT_ID/oauth2 and for `Redirects`, create following two entries:
-5. `http://localhost:3000/authorize/` for development
-6. `https://example.com/authorize/` for production
-7. Copy `CLIENT ID` (below the entered app name) and `CLIENT SECRET`
-8. Update `web/.env.local` `REACT_APP_OAUTH_DISCORD_ID` with `CLIENT ID`
-9. Update `api/.env.local` `OAUTH_DISCORD_ID` with `CLIENT ID`
-10. Update `api/.env.local` `OAUTH_DISCORD_SECRET` with `CLIENT SECRET`
+   1. `http://localhost:3000/authorize/` for development
+   2. `https://example.com/authorize/` for production
+5. Copy `CLIENT ID` (below the entered app name) and `CLIENT SECRET`
+6. Update `web/.env.local` `REACT_APP_OAUTH_DISCORD_ID` with `CLIENT ID`
+7. Update `api/.env.local` `OAUTH_DISCORD_ID` with `CLIENT ID`
+8. Update `api/.env.local` `OAUTH_DISCORD_SECRET` with `CLIENT SECRET`
 
 [↑ all integrations](#integrations)
 
