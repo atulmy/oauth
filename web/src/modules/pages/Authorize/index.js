@@ -1,7 +1,7 @@
 // Imports
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import * as queryString from 'query-string'
 
 // UI imports
@@ -20,7 +20,6 @@ import { authorize } from 'modules/user/api/actions/mutation'
 // Component
 const Authorize = ({ history, location }) => {
   // state
-  const [isAuthorizing, setIsAuthorizing] = useState(false)
   const dispatch = useDispatch()
 
   // on load
@@ -33,8 +32,6 @@ const Authorize = ({ history, location }) => {
     const query = queryString.parse(location.search)
 
     if (query.code && query.state) {
-      setIsAuthorizing(true)
-
       let redirectTo = routes.pagesHome.path
 
       try {
@@ -53,8 +50,6 @@ const Authorize = ({ history, location }) => {
       } catch (error) {
         // console.log(error)
       } finally {
-        setIsAuthorizing(false)
-
         history.push(redirectTo)
       }
     } else {

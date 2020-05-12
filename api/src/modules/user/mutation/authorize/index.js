@@ -12,11 +12,12 @@ import authResponse from 'modules/user/query/authResponse'
 import facebook from './facebook'
 import google from './google'
 import instagram from './instagram'
+import reddit from './reddit'
+import discord from './discord'
 import github from './github'
 import gitlab from './gitlab'
 import digitalocean from './digitalocean'
 import bitbucket from './bitbucket'
-import reddit from './reddit'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -69,6 +70,16 @@ export default async function authorize({ params: { code, state } }) {
         userProvider = await instagram({ code })
         break
 
+      // reddit
+      case params.user.oauth.providers.reddit.key:
+        userProvider = await reddit({ code })
+        break
+
+      // discord
+      case params.user.oauth.providers.discord.key:
+        userProvider = await discord({ code })
+        break
+
       // github
       case params.user.oauth.providers.github.key:
         userProvider = await github({ code })
@@ -84,14 +95,9 @@ export default async function authorize({ params: { code, state } }) {
         userProvider = await digitalocean({ code })
         break
 
-      // digitalocean
+      // bitbucket
       case params.user.oauth.providers.bitbucket.key:
         userProvider = await bitbucket({ code })
-        break
-
-      // reddit
-      case params.user.oauth.providers.reddit.key:
-        userProvider = await reddit({ code })
         break
     }
 

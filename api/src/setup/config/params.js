@@ -40,6 +40,16 @@ export default {
           title: 'Instagram',
         },
 
+        reddit: {
+          key: 'reddit',
+          title: 'Reddit',
+        },
+
+        discord: {
+          key: 'discord',
+          title: 'Discord',
+        },
+
         github: {
           key: 'github',
           title: 'Github',
@@ -58,11 +68,6 @@ export default {
         bitbucket: {
           key: 'bitbucket',
           title: 'Bitbucket',
-        },
-
-        reddit: {
-          key: 'reddit',
-          title: 'Reddit',
         },
       },
 

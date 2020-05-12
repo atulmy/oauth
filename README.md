@@ -2,7 +2,7 @@
 
 OAuth 2.0 implementation for various providers in one place.
 
-<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/discord.svg" alt="Discord" width="30" height="30" />
 
 This project contains OAuth 2.0 implementation for various providers and helps you understand of following OAuth 2.0 flow:
 
@@ -22,6 +22,7 @@ Although this project is build using React for frontend and NodeJS for backend, 
 - [x] [Google](#google)
 - [x] [Instagram](#instagram)
 - [x] [Reddit](#reddit)
+- [x] [Discord](#discord)
 
 ### Tech platforms
 
@@ -112,6 +113,23 @@ Although this project is build using React for frontend and NodeJS for backend, 
 5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `id`
 6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `id`
 7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `secret`
+
+[↑ all integrations](#integrations)
+
+---
+
+### Discord
+
+1. Read official flow: https://discord.com/developers/docs/topics/oauth2
+2. Create a new OAuth application: https://discord.com/developers/applications and click on `New Application`
+3. Fill in `name`, eg: `Example` and click on `Create` button
+4. Go to application's OAuth section https://discord.com/developers/applications/CLIENT_ID/oauth2 and for `Redirects`, create following two entries:
+5. `http://localhost:3000/authorize/` for development
+6. `https://example.com/authorize/` for production
+7. Copy `CLIENT ID` (below the entered app name) and `CLIENT SECRET`
+8. Update `web/.env.local` `REACT_APP_OAUTH_DISCORD_ID` with `CLIENT ID`
+9. Update `api/.env.local` `OAUTH_DISCORD_ID` with `CLIENT ID`
+10. Update `api/.env.local` `OAUTH_DISCORD_SECRET` with `CLIENT SECRET`
 
 [↑ all integrations](#integrations)
 

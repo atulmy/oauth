@@ -18,6 +18,7 @@ import gitlab from 'setup/oauth/gitlab'
 import digitalocean from 'setup/oauth/digitalocean'
 import bitbucket from 'setup/oauth/bitbucket'
 import reddit from 'setup/oauth/reddit'
+import discord from 'setup/oauth/discord'
 
 // Component
 const Home = () => {
@@ -59,6 +60,13 @@ const Home = () => {
             <Button
               title='Reddit'
               image={`${URL_WEB}/images/social/reddit.svg`}
+            />
+          </a>
+
+          <a href={discord()}>
+            <Button
+              title='Discord'
+              image={`${URL_WEB}/images/social/discord.svg`}
             />
           </a>
 
