@@ -209,6 +209,29 @@ Although this project is build using React for frontend and NodeJS for backend, 
 
 [↑ all integrations](#integrations)
 
+---
+
+### Azure
+
+1. Read official flow: https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
+2. Create a new OAuth application: https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade and fill in following:
+   1. `Name` enter your application name, eg: `Example`
+   2. `Supported account types` choose `Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)`
+   3. `Redirect URI`:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Goto **Dashboard → App → Certificates & secrets** and under `Client secrets` click on `+ New client secret`
+   1. Enter `Description`, eg: `Example Secret Key`
+   2. For `Expires` choose `Never`
+4. Click on `Add` button and copy the `Secret` value
+5. Click on **Name** of your application and copy `Application (client) ID` and `Secret`
+6. Update `web/.env.local` `REACT_APP_OAUTH_AZURE_ID` with `Application (client) ID`
+7. Update `api/.env.local` `OAUTH_AZURE_ID` with `Application (client) ID`
+8. Update `api/.env.local` `OAUTH_AZURE_SECRET` with `Secret`
+9. Optionally, change `OAUTH_AZURE_TENANT` as per your requirement.
+
+[↑ all integrations](#integrations)
+
 ## Core Structure
 
     oauth
@@ -271,6 +294,7 @@ Looking for a particular OAuth integration not yet added? Open an issue / Send a
 - [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
 
 ## Community reviews
+
 - [Reddit](https://www.reddit.com/r/javascript/comments/gi40mo/oauth_20_implementation_for_various_providers_in/)
 - [Facebook](https://www.facebook.com/groups/359999434098189/permalink/2758999830864792)
 

@@ -56,6 +56,11 @@ export default {
           key: 'bitbucket',
           title: 'Bitbucket',
         },
+
+        azure: {
+          key: 'azure',
+          title: 'Azure',
+        },
       },
     },
   },

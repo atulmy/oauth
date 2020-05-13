@@ -18,6 +18,7 @@ import github from './github'
 import gitlab from './gitlab'
 import digitalocean from './digitalocean'
 import bitbucket from './bitbucket'
+import azure from './azure'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -98,6 +99,11 @@ export default async function authorize({ params: { code, state } }) {
       // bitbucket
       case params.user.oauth.providers.bitbucket.key:
         userProvider = await bitbucket({ code })
+        break
+
+      // azure
+      case params.user.oauth.providers.azure.key:
+        userProvider = await azure({ code })
         break
     }
 

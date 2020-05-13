@@ -19,6 +19,7 @@ import digitalocean from 'setup/oauth/digitalocean'
 import bitbucket from 'setup/oauth/bitbucket'
 import reddit from 'setup/oauth/reddit'
 import discord from 'setup/oauth/discord'
+import azure from 'setup/oauth/azure'
 
 // Component
 const Home = () => {
@@ -96,6 +97,10 @@ const Home = () => {
               title='Bitbucket'
               image={`${URL_WEB}/images/tech/bitbucket.svg`}
             />
+          </a>
+
+          <a href={azure()}>
+            <Button title='Azure' image={`${URL_WEB}/images/tech/azure.svg`} />
           </a>
         </div>
       </section>
