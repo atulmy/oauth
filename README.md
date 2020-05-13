@@ -270,6 +270,10 @@ Looking for a particular OAuth integration not yet added? Open an issue / Send a
 - Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
 - [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
 
+## Community reviews
+- [Reddit](https://www.reddit.com/r/javascript/comments/gi40mo/oauth_20_implementation_for_various_providers_in/)
+- [Facebook](https://www.facebook.com/groups/359999434098189/permalink/2758999830864792)
+
 ## Hire me
 
 Looking for a developer to build your next idea or need a developer to work remotely? Get in touch: [atul.12788@gmail.com](mailto:atul.12788@gmail.com)
