@@ -4,13 +4,22 @@ OAuth 2.0 implementation for various providers in one place.
 
 <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/discord.svg" alt="Discord" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/azure.svg" alt="Azure" width="30" height="30" />
 
-This project contains OAuth 2.0 implementation for various providers and helps you understand OAuth 2.0 flow:
+This project contains OAuth 2.0 implementation for various providers and help you understand following OAuth 2.0 flow:
 
 1. Show platform dialog
 2. Get Access Token
 3. Use token to fetch user details
 
-Although this project is build using React for frontend and NodeJS for backend, the flow and implementation largely remains same for any other language or framework.
+Actual steps implemented in this sample code repository:
+1. Create redirect URL for respective plaform
+2. Redirect the user to respective plaform
+3. User decides to grant the permissions to the application
+4. Recieve temporary code on the server
+5. Exchange the temporary code for access token
+6. Get user details using the access token
+7. Save user details into the database and authenticate the user
+
+Although this project is build using React on the front-end and NodeJS on the back-end, the flow and implementation largely remains same for any other language or framework.
 
 <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/preview.png" alt="OAuth" />
 
