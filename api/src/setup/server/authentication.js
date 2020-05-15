@@ -13,7 +13,7 @@ export default async function (request, response, next) {
     try {
       const token = header.split(' ')
       const userToken = jwt.verify(token[1], SECURITY_SECRET)
-      let user = await User.findOne({ _id: userToken.id, isDeleted: false })
+      let user = await User.findOne({ _id: userToken.id })
 
       if (user) {
         request.auth = {

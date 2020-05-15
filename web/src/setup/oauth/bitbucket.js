@@ -2,8 +2,7 @@
 import * as queryString from 'query-string'
 
 // App imports
-import { URL_WEB, OAUTH_BITBUCKET_ID } from 'setup/config/env'
-import routes from 'setup/routes'
+import { OAUTH_BITBUCKET_ID } from 'setup/config/env'
 import params from 'setup/config/params'
 
 // bitbucket

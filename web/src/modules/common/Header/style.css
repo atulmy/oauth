@@ -1,0 +1,31 @@
+.common-header {
+  display: flex;
+  flex-direction: column;
+}
+.common-header > .brand {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cccccc;
+  padding: 1.5rem 2rem;
+}
+
+.common-header > .brand > h5 {
+  margin-top: 0.5rem;
+  color: #666666;
+}
+
+.common-header > .menu {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #cccccc;
+  padding: 0 1rem;
+}
+
+.common-header > .menu > a {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+.common-header > .menu > a.active {
+  color: var(--primary);
+}

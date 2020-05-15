@@ -8,19 +8,20 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
+    "moment": "^2.25.3",
     "query-string": "^6.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "husky": "^4.2.3",
-    "prettier": "2.0.2",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
     "pretty-quick": "^2.0.1"
   },
   "scripts": {

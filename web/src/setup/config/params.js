@@ -8,6 +8,11 @@ export default {
     copyright: '© 2020',
   },
 
+  // common
+  common: {
+    date: 'YYYY-MM-DD hh:mm a',
+  },
+
   // user
   user: {
     oauth: {

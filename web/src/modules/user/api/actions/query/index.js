@@ -3,6 +3,7 @@ import loginSetUser from './loginSetUser'
 import loginSetUserLocalStorage from './loginSetUserLocalStorage'
 import logout from './logout'
 import logoutUnsetUserLocalStorage from './logoutUnsetUserLocalStorage'
+import profile from './profile'
 
 // Queries
 export {
@@ -10,4 +11,5 @@ export {
   loginSetUserLocalStorage,
   logout,
   logoutUnsetUserLocalStorage,
+  profile,
 }

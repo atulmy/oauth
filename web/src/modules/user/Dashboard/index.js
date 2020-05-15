@@ -1,30 +1,18 @@
 // Imports
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 // UI imports
 import './style.css'
 
 // App imports
 import params from 'setup/config/params'
-import { logout } from 'modules/user/api/actions/query'
-import Button from 'ui/Button'
 
 // Component
 const Dashboard = () => {
   // state
   const { user } = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
-
-  // on logout
-  const onLogout = () => {
-    let check = window.confirm('Are you sure you want to logout?')
-
-    if (check) {
-      dispatch(logout())
-    }
-  }
 
   // render
   return (
@@ -36,11 +24,7 @@ const Dashboard = () => {
 
       {/* content */}
       <section className='user-dashboard'>
-        <p>Welcome {user && user.name}!</p>
-
-        <aside>
-          <Button title='Logout' onClick={onLogout} />
-        </aside>
+        <p>Welcome, {user && user.name}!</p>
       </section>
     </>
   )

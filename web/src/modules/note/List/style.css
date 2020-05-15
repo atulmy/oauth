@@ -1,0 +1,41 @@
+.note-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 30rem;
+}
+
+.note-list > form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey-light);
+  padding: 1rem;
+}
+
+.note-list > aside {
+  margin-top: 2rem;
+}
+
+.note-list > aside > .list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.note-list > aside > .list > .item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--grey);
+  padding: 0.5rem 0;
+}
+.note-list > aside > .list > .item:last-child {
+  border: none;
+}
+.note-list > aside > .list > .item > .info {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  color: var(--grey-dark);
+}
+.note-list > aside > .list > .item > .info > span {
+  cursor: pointer;
+}

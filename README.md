@@ -11,6 +11,7 @@ This project contains OAuth 2.0 implementation for various providers and help yo
 3. Use token to fetch user details
 
 Actual steps implemented in this sample code repository:
+
 1. Create redirect URL for respective plaform
 2. Redirect the user to respective plaform
 3. User decides to grant the permissions to the application
@@ -19,9 +20,9 @@ Actual steps implemented in this sample code repository:
 6. Get user details using the access token
 7. Save user details into the database and authenticate the user
 
-Although this project is build using React on the front-end and NodeJS on the back-end, the flow and implementation largely remains same for any other language or framework.
+Although this project is built using React on the front-end and NodeJS on the back-end, the flow and implementation largely remains same for any other language or framework.
 
-<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/preview.png" alt="OAuth" />
+<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/preview.png?v=0.1" alt="OAuth" />
 
 ## Integrations
 

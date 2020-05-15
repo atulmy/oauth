@@ -1,0 +1,13 @@
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.user-dashboard > p {
+  margin-bottom: 0.5rem;
+}
+
+.user-dashboard > aside {
+  margin-top: 1rem;
+}
