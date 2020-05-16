@@ -52,3 +52,6 @@ export const OAUTH_BITBUCKET_SECRET = process.env.OAUTH_BITBUCKET_SECRET
 export const OAUTH_AZURE_ID = process.env.OAUTH_AZURE_ID
 export const OAUTH_AZURE_SECRET = process.env.OAUTH_AZURE_SECRET
 export const OAUTH_AZURE_TENANT = process.env.OAUTH_AZURE_TENANT
+
+export const OAUTH_ZOOM_ID = process.env.OAUTH_ZOOM_ID
+export const OAUTH_ZOOM_SECRET = process.env.OAUTH_ZOOM_SECRET

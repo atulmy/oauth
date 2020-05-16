@@ -50,6 +50,11 @@ export default {
           title: 'Discord',
         },
 
+        zoom: {
+          key: 'zoom',
+          title: 'Zoom',
+        },
+
         github: {
           key: 'github',
           title: 'Github',

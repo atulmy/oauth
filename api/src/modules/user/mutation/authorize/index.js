@@ -14,6 +14,7 @@ import google from './google'
 import instagram from './instagram'
 import reddit from './reddit'
 import discord from './discord'
+import zoom from './zoom'
 import github from './github'
 import gitlab from './gitlab'
 import digitalocean from './digitalocean'
@@ -79,6 +80,11 @@ export default async function authorize({ params: { code, state } }) {
       // discord
       case params.user.oauth.providers.discord.key:
         userProvider = await discord({ code })
+        break
+
+      // zoom
+      case params.user.oauth.providers.zoom.key:
+        userProvider = await zoom({ code })
         break
 
       // github

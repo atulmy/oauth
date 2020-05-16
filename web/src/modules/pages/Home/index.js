@@ -13,12 +13,13 @@ import AuthCheck from 'modules/common/AuthCheck'
 import facebook from 'setup/oauth/facebook'
 import google from 'setup/oauth/google'
 import instagram from 'setup/oauth/instagram'
+import reddit from 'setup/oauth/reddit'
+import discord from 'setup/oauth/discord'
+import zoom from 'setup/oauth/zoom'
 import github from 'setup/oauth/github'
 import gitlab from 'setup/oauth/gitlab'
 import digitalocean from 'setup/oauth/digitalocean'
 import bitbucket from 'setup/oauth/bitbucket'
-import reddit from 'setup/oauth/reddit'
-import discord from 'setup/oauth/discord'
 import azure from 'setup/oauth/azure'
 
 // Component
@@ -69,6 +70,10 @@ const Home = () => {
               title='Discord'
               image={`${URL_WEB}/images/social/discord.svg`}
             />
+          </a>
+
+          <a href={zoom()}>
+            <Button title='Zoom' image={`${URL_WEB}/images/social/zoom.svg`} />
           </a>
 
           <a href={github()}>

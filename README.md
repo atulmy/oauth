@@ -146,6 +146,31 @@ Although this project is built using React on the front-end and NodeJS on the ba
 
 ---
 
+### Zoom
+
+1. Read official flow: https://marketplace.zoom.us/docs/guides/build/oauth-app
+2. Create a new OAuth application: https://marketplace.zoom.us/develop/create under OAuth click `Create` button and fill in following:
+   1. `Name` enter your application name, eg: `Example`
+   2. Select `User-managed app`
+3. Under `Redirect URL for OAuth`, enter following:
+   1. For development, enter `http://localhost:3000/authorize/`
+   2. For production, enter `https://example.com/authorize/`
+4. Under `Whitelist URL`, enter following:
+   1. For development, enter `http://localhost:3000`
+   2. For production, enter `https://example.com`
+5. Goto **Your App → Scopes** and click on `+ Add scopes`
+   1. Select `User`
+   2. Check `user:read` and `user_profile`
+6. Fill in required fields under `Information` like `Short Description`, `Developer Contact Information`, etc.
+7. Copy `Client ID` and `Client Secret`
+8. Update `web/.env.local` `REACT_APP_OAUTH_ZOOM_ID` with `Client ID`
+9. Update `api/.env.local` `OAUTH_ZOOM_ID` with `Client ID`
+10. Update `api/.env.local` `OAUTH_ZOOM_SECRET` with `Client Secret`
+
+[↑ all integrations](#integrations)
+
+---
+
 ### GitHub
 
 1. Read official flow: https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps
