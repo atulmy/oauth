@@ -8,6 +8,7 @@ OAuth 2.0 implementation for various providers in one place.
 <a href="#linkedin"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/linkedin.svg" alt="LinkedIn" width="30" height="30" /></a>
 <a href="#reddit"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /></a>
 <a href="#discord"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/discord.svg" alt="Discord" width="30" height="30" /></a>
+<a href="#zoom"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/zoom.svg" alt="Zoom" width="30" height="30" /></a>
 <a href="#github"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /></a>
 <a href="#gitlab"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" height="30" /></a>
 <a href="#digitalocean"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /></a>
@@ -44,6 +45,7 @@ Although this project is built using React on the front-end and NodeJS on the ba
 - [x] [LinkedIn](#instagram)
 - [x] [Reddit](#reddit)
 - [x] [Discord](#discord)
+- [x] [Zoom](#zoom)
 
 ### Tech platforms
 
