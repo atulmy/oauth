@@ -42,7 +42,7 @@ Although this project is built using React on the front-end and NodeJS on the ba
 - [x] [Facebook](#facebook)
 - [x] [Google](#google)
 - [x] [Instagram](#instagram)
-- [x] [LinkedIn](#instagram)
+- [x] [LinkedIn](#linkedin)
 - [x] [Reddit](#reddit)
 - [x] [Discord](#discord)
 - [x] [Zoom](#zoom)
