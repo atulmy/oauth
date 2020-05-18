@@ -135,9 +135,9 @@ Although this project is built using React on the front-end and NodeJS on the ba
       1. `http://localhost:3000/authorize/`
       2. `https://example.com/authorize/`
    2. Copy `Client ID` and `Client Secret`
-5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `Client ID`
-6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `Client ID`
-7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `Client Secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_LINKEDIN_ID` with `Client ID`
+6. Update `api/.env.local` `OAUTH_LINKEDIN_ID` with `Client ID`
+7. Update `api/.env.local` `OAUTH_LINKEDIN_SECRET` with `Client Secret`
 
 [↑ all integrations](#integrations)
 
