@@ -12,6 +12,7 @@ import authResponse from 'modules/user/query/authResponse'
 import facebook from './facebook'
 import google from './google'
 import instagram from './instagram'
+import linkedin from './linkedin'
 import reddit from './reddit'
 import discord from './discord'
 import zoom from './zoom'
@@ -70,6 +71,11 @@ export default async function authorize({ params: { code, state } }) {
       // instagram
       case params.user.oauth.providers.instagram.key:
         userProvider = await instagram({ code })
+        break
+
+      // linkedin
+      case params.user.oauth.providers.linkedin.key:
+        userProvider = await linkedin({ code })
         break
 
       // reddit

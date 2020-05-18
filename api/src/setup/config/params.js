@@ -40,6 +40,11 @@ export default {
           title: 'Instagram',
         },
 
+        linkedin: {
+          key: 'linkedin',
+          title: 'LinkedIn',
+        },
+
         reddit: {
           key: 'reddit',
           title: 'Reddit',

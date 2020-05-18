@@ -2,7 +2,17 @@
 
 OAuth 2.0 implementation for various providers in one place.
 
-<img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/discord.svg" alt="Discord" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /> <img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/azure.svg" alt="Azure" width="30" height="30" />
+<a href="#facebook"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/facebook.svg" alt="Facebook" width="30" height="30" /></a>
+<a href="#google"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /></a>
+<a href="#instagram"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" height="30" /></a>
+<a href="#linkedin"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/linkedin.svg" alt="LinkedIn" width="30" height="30" /></a>
+<a href="#reddit"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /></a>
+<a href="#discord"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/discord.svg" alt="Discord" width="30" height="30" /></a>
+<a href="#github"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /></a>
+<a href="#gitlab"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/gitlab.svg" alt="GitLab" width="30" height="30" /></a>
+<a href="#digitalocean"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /></a>
+<a href="#bitbucket"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /></a>
+<a href="#azure"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/azure.svg" alt="Azure" width="30" height="30" /></a>
 
 This project contains OAuth 2.0 implementation for various providers and help you understand following OAuth 2.0 flow:
 
@@ -12,10 +22,10 @@ This project contains OAuth 2.0 implementation for various providers and help yo
 
 Actual steps implemented in this sample code repository:
 
-1. Create redirect URL for respective plaform
-2. Redirect the user to respective plaform
+1. Create redirect URL for respective platform
+2. Redirect the user to respective platform
 3. User decides to grant the permissions to the application
-4. Recieve temporary code on the server
+4. Receive temporary code on the server
 5. Exchange the temporary code for access token
 6. Get user details using the access token
 7. Save user details into the database and authenticate the user
@@ -31,6 +41,7 @@ Although this project is built using React on the front-end and NodeJS on the ba
 - [x] [Facebook](#facebook)
 - [x] [Google](#google)
 - [x] [Instagram](#instagram)
+- [x] [LinkedIn](#instagram)
 - [x] [Reddit](#reddit)
 - [x] [Discord](#discord)
 
@@ -104,6 +115,27 @@ Although this project is built using React on the front-end and NodeJS on the ba
 
     1. As of writing this Readme, Instagram does not accept `localhost:3000` as valid callback URI. So while testing, you may need to manually change the callback URL.
     2. For production, you need to complete `App Review for Instagram Basic Display` by submitting `instagram_graph_user_profile` and `instagram_graph_user_media` for review.
+
+[↑ all integrations](#integrations)
+
+---
+
+### LinkedIn
+
+1. Read official flow: https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow
+2. Create a new application: https://www.linkedin.com/developers/apps/new and fill in following:
+   1. `App name` enter your application name, eg: `Example`
+   1. `Company` select an existing or create new company page
+   1. `App logo` upload a logo
+3. Click on `Create app` button
+4. Goto **App → Auth**
+   1. Under `Redirect URLs`, fill in following two entries:
+      1. `http://localhost:3000/authorize/`
+      2. `https://example.com/authorize/`
+   2. Copy `Client ID` and `Client Secret`
+5. Update `web/.env.local` `REACT_APP_OAUTH_REDDIT_ID` with `Client ID`
+6. Update `api/.env.local` `OAUTH_REDDIT_ID` with `Client ID`
+7. Update `api/.env.local` `OAUTH_REDDIT_SECRET` with `Client Secret`
 
 [↑ all integrations](#integrations)
 

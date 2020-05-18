@@ -31,11 +31,17 @@ export const OAUTH_GOOGLE_SECRET = process.env.OAUTH_GOOGLE_SECRET
 export const OAUTH_INSTAGRAM_ID = process.env.OAUTH_INSTAGRAM_ID
 export const OAUTH_INSTAGRAM_SECRET = process.env.OAUTH_INSTAGRAM_SECRET
 
+export const OAUTH_LINKEDIN_ID = process.env.OAUTH_LINKEDIN_ID
+export const OAUTH_LINKEDIN_SECRET = process.env.OAUTH_LINKEDIN_SECRET
+
 export const OAUTH_REDDIT_ID = process.env.OAUTH_REDDIT_ID
 export const OAUTH_REDDIT_SECRET = process.env.OAUTH_REDDIT_SECRET
 
 export const OAUTH_DISCORD_ID = process.env.OAUTH_DISCORD_ID
 export const OAUTH_DISCORD_SECRET = process.env.OAUTH_DISCORD_SECRET
+
+export const OAUTH_ZOOM_ID = process.env.OAUTH_ZOOM_ID
+export const OAUTH_ZOOM_SECRET = process.env.OAUTH_ZOOM_SECRET
 
 export const OAUTH_GITHUB_ID = process.env.OAUTH_GITHUB_ID
 export const OAUTH_GITHUB_SECRET = process.env.OAUTH_GITHUB_SECRET
@@ -52,6 +58,3 @@ export const OAUTH_BITBUCKET_SECRET = process.env.OAUTH_BITBUCKET_SECRET
 export const OAUTH_AZURE_ID = process.env.OAUTH_AZURE_ID
 export const OAUTH_AZURE_SECRET = process.env.OAUTH_AZURE_SECRET
 export const OAUTH_AZURE_TENANT = process.env.OAUTH_AZURE_TENANT
-
-export const OAUTH_ZOOM_ID = process.env.OAUTH_ZOOM_ID
-export const OAUTH_ZOOM_SECRET = process.env.OAUTH_ZOOM_SECRET

@@ -13,6 +13,7 @@ import AuthCheck from 'modules/common/AuthCheck'
 import facebook from 'setup/oauth/facebook'
 import google from 'setup/oauth/google'
 import instagram from 'setup/oauth/instagram'
+import linkedin from 'setup/oauth/linkedin'
 import reddit from 'setup/oauth/reddit'
 import discord from 'setup/oauth/discord'
 import zoom from 'setup/oauth/zoom'
@@ -55,6 +56,13 @@ const Home = () => {
             <Button
               title='Instagram'
               image={`${URL_WEB}/images/social/instagram.svg`}
+            />
+          </a>
+
+          <a href={linkedin()}>
+            <Button
+              title='LinkedIn'
+              image={`${URL_WEB}/images/social/linkedin.svg`}
             />
           </a>
 

@@ -10,8 +10,8 @@ import {
 } from 'setup/config/env'
 import params from 'setup/config/params'
 
-// github
-export default async function github({ code }) {
+// azure
+export default async function azure({ code }) {
   let userProvider
 
   // 1. access_token account using OAuth code
