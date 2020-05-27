@@ -21,6 +21,7 @@ import gitlab from './gitlab'
 import digitalocean from './digitalocean'
 import bitbucket from './bitbucket'
 import azure from './azure'
+import spotify from './spotify'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -116,6 +117,11 @@ export default async function authorize({ params: { code, state } }) {
       // azure
       case params.user.oauth.providers.azure.key:
         userProvider = await azure({ code })
+        break
+
+      // spotify
+      case params.user.oauth.providers.spotify.key:
+        userProvider = await spotify({ code })
         break
     }
 

@@ -22,6 +22,7 @@ import gitlab from 'setup/oauth/gitlab'
 import digitalocean from 'setup/oauth/digitalocean'
 import bitbucket from 'setup/oauth/bitbucket'
 import azure from 'setup/oauth/azure'
+import spotify from 'setup/oauth/spotify'
 
 // Component
 const Home = () => {
@@ -37,84 +38,112 @@ const Home = () => {
       <section className='pages-home'>
         <p>Welcome guest! Sign in with:</p>
 
-        <div className='cta'>
-          <a href={facebook()}>
-            <Button
-              title='Facebook'
-              image={`${URL_WEB}/images/social/facebook.svg`}
-            />
-          </a>
+        <div className='group'>
+          {/* social */}
+          <section>
+            <h4>Social:</h4>
 
-          <a href={google()}>
-            <Button
-              title='Google'
-              image={`${URL_WEB}/images/social/google.svg`}
-            />
-          </a>
+            <a href={facebook()}>
+              <Button
+                title='Facebook'
+                image={`${URL_WEB}/images/social/facebook.svg`}
+              />
+            </a>
 
-          <a href={instagram()}>
-            <Button
-              title='Instagram'
-              image={`${URL_WEB}/images/social/instagram.svg`}
-            />
-          </a>
+            <a href={google()}>
+              <Button
+                title='Google'
+                image={`${URL_WEB}/images/social/google.svg`}
+              />
+            </a>
 
-          <a href={linkedin()}>
-            <Button
-              title='LinkedIn'
-              image={`${URL_WEB}/images/social/linkedin.svg`}
-            />
-          </a>
+            <a href={instagram()}>
+              <Button
+                title='Instagram'
+                image={`${URL_WEB}/images/social/instagram.svg`}
+              />
+            </a>
 
-          <a href={reddit()}>
-            <Button
-              title='Reddit'
-              image={`${URL_WEB}/images/social/reddit.svg`}
-            />
-          </a>
+            <a href={linkedin()}>
+              <Button
+                title='LinkedIn'
+                image={`${URL_WEB}/images/social/linkedin.svg`}
+              />
+            </a>
 
-          <a href={discord()}>
-            <Button
-              title='Discord'
-              image={`${URL_WEB}/images/social/discord.svg`}
-            />
-          </a>
+            <a href={reddit()}>
+              <Button
+                title='Reddit'
+                image={`${URL_WEB}/images/social/reddit.svg`}
+              />
+            </a>
 
-          <a href={zoom()}>
-            <Button title='Zoom' image={`${URL_WEB}/images/social/zoom.svg`} />
-          </a>
+            <a href={discord()}>
+              <Button
+                title='Discord'
+                image={`${URL_WEB}/images/social/discord.svg`}
+              />
+            </a>
 
-          <a href={github()}>
-            <Button
-              title='GitHub'
-              image={`${URL_WEB}/images/tech/github.svg`}
-            />
-          </a>
+            <a href={zoom()}>
+              <Button
+                title='Zoom'
+                image={`${URL_WEB}/images/social/zoom.svg`}
+              />
+            </a>
+          </section>
 
-          <a href={gitlab()}>
-            <Button
-              title='GitLab'
-              image={`${URL_WEB}/images/tech/gitlab.svg`}
-            />
-          </a>
+          {/* tech */}
+          <section>
+            <h4>Tech:</h4>
 
-          <a href={digitalocean()}>
-            <Button
-              title='DigitalOcean'
-              image={`${URL_WEB}/images/tech/digitalocean.svg`}
-            />
-          </a>
+            <a href={github()}>
+              <Button
+                title='GitHub'
+                image={`${URL_WEB}/images/tech/github.svg`}
+              />
+            </a>
 
-          <a href={bitbucket()}>
-            <Button
-              title='Bitbucket'
-              image={`${URL_WEB}/images/tech/bitbucket.svg`}
-            />
-          </a>
+            <a href={gitlab()}>
+              <Button
+                title='GitLab'
+                image={`${URL_WEB}/images/tech/gitlab.svg`}
+              />
+            </a>
 
-          <a href={azure()}>
-            <Button title='Azure' image={`${URL_WEB}/images/tech/azure.svg`} />
-          </a>
+            <a href={digitalocean()}>
+              <Button
+                title='DigitalOcean'
+                image={`${URL_WEB}/images/tech/digitalocean.svg`}
+              />
+            </a>
+
+            <a href={bitbucket()}>
+              <Button
+                title='Bitbucket'
+                image={`${URL_WEB}/images/tech/bitbucket.svg`}
+              />
+            </a>
+
+            <a href={azure()}>
+              <Button
+                title='Azure'
+                image={`${URL_WEB}/images/tech/azure.svg`}
+              />
+            </a>
+          </section>
+
+          {/* other */}
+          <section>
+            <h4>Other:</h4>
+
+            <a href={spotify()}>
+              <Button
+                title='Spotify'
+                image={`${URL_WEB}/images/other/spotify.svg`}
+              />
+            </a>
+          </section>
         </div>
       </section>
 

@@ -84,6 +84,11 @@ export default {
           key: 'azure',
           title: 'Azure',
         },
+
+        spotify: {
+          key: 'spotify',
+          title: 'Spotify',
+        },
       },
 
       redirectUri: 'authorize/',

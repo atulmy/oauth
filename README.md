@@ -14,6 +14,7 @@ OAuth 2.0 implementation for various providers in one place.
 <a href="#digitalocean"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/digitalocean.svg" alt="DigitalOcean" width="30" height="30" /></a>
 <a href="#bitbucket"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /></a>
 <a href="#azure"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/azure.svg" alt="Azure" width="30" height="30" /></a>
+<a href="#spotify"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/other/spotify.svg" alt="Spotify" width="30" height="30" /></a>
 
 This project contains OAuth 2.0 implementation for various providers and help you understand following OAuth 2.0 flow:
 
@@ -54,6 +55,11 @@ Although this project is built using React on the front-end and NodeJS on the ba
 - [x] [DigitalOcean](#digitalocean)
 - [x] [Bitbucket](#bitbucket)
 - [x] [Azure](#azure)
+
+### Other platforms
+
+- [x] [Spotify](#spotify)
+- [ ] [Shopify](#shopify)
 
 ## Docs
 
@@ -299,6 +305,25 @@ Although this project is built using React on the front-end and NodeJS on the ba
 7. Update `api/.env.local` `OAUTH_AZURE_ID` with `Application (client) ID`
 8. Update `api/.env.local` `OAUTH_AZURE_SECRET` with `Secret`
 9. Optionally, change `OAUTH_AZURE_TENANT` as per your requirement.
+
+[↑ all integrations](#integrations)
+
+---
+
+### Spotify
+
+1. Read official flow: https://developer.spotify.com/documentation/general/guides/authorization-guide
+2. Create a new OAuth application: https://developer.spotify.com/dashboard/applications and fill in following:
+   1. `App or Hardware Name` enter your application name, eg: `Example`
+   2. `App or Hardware Description` enter your application name, eg: `Example OAuth app`
+3. Goto **Dashboard → App** and click on `Edit settings`
+4. For `Redirect URIs` make following entries:
+   1. For development, enter `http://localhost:3000/authorize/`
+   2. For production, enter `https://example.com/authorize/`
+5. Copy `Client ID` and `Client Secret`
+6. Update `web/.env.local` `REACT_APP_OAUTH_SPOTIFY_ID` with `Client ID`
+7. Update `api/.env.local` `OAUTH_SPOTIFY_ID` with `Client ID`
+8. Update `api/.env.local` `OAUTH_SPOTIFY_SECRET` with `Client Secret`
 
 [↑ all integrations](#integrations)
 

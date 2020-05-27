@@ -4,14 +4,25 @@
   flex: 1;
 }
 
-.pages-home > .cta {
+.pages-home > .group {
+  display: flex;
+  flex-direction: row;
   margin-top: 1rem;
-  max-width: 12rem;
 }
-.pages-home > .cta > a {
+.pages-home > .group > section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  width: 12rem;
+}
+
+.pages-home > .group > section > h4 {
+  margin-bottom: 1rem;
+}
+.pages-home > .group > section > a {
   display: block;
   margin-bottom: 1rem;
 }
-.pages-home > .cta > a > button {
+.pages-home > .group > section > a > button {
   width: 100%;
 }

@@ -12,9 +12,12 @@ export const OAUTH_LINKEDIN_ID = process.env.REACT_APP_OAUTH_LINKEDIN_ID
 export const OAUTH_REDDIT_ID = process.env.REACT_APP_OAUTH_REDDIT_ID
 export const OAUTH_DISCORD_ID = process.env.REACT_APP_OAUTH_DISCORD_ID
 export const OAUTH_ZOOM_ID = process.env.REACT_APP_OAUTH_ZOOM_ID
+
 export const OAUTH_GITHUB_ID = process.env.REACT_APP_OAUTH_GITHUB_ID
 export const OAUTH_GITLAB_ID = process.env.REACT_APP_OAUTH_GITLAB_ID
 export const OAUTH_DIGITALOCEAN_ID = process.env.REACT_APP_OAUTH_DIGITALOCEAN_ID
 export const OAUTH_BITBUCKET_ID = process.env.REACT_APP_OAUTH_BITBUCKET_ID
 export const OAUTH_AZURE_ID = process.env.REACT_APP_OAUTH_AZURE_ID
 export const OAUTH_AZURE_TENANT = process.env.REACT_APP_OAUTH_AZURE_TENANT
+
+export const OAUTH_SPOTIFY_ID = process.env.REACT_APP_OAUTH_SPOTIFY_ID
