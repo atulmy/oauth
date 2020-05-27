@@ -22,6 +22,7 @@ import digitalocean from './digitalocean'
 import bitbucket from './bitbucket'
 import azure from './azure'
 import spotify from './spotify'
+import shopify from './shopify'
 
 // authorize
 export default async function authorize({ params: { code, state } }) {
@@ -122,6 +123,11 @@ export default async function authorize({ params: { code, state } }) {
       // spotify
       case params.user.oauth.providers.spotify.key:
         userProvider = await spotify({ code })
+        break
+
+      // shopify
+      case params.user.oauth.providers.shopify.key:
+        userProvider = await shopify({ code })
         break
     }
 

@@ -15,6 +15,7 @@ OAuth 2.0 implementation for various providers in one place.
 <a href="#bitbucket"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/bitbucket.svg" alt="Bitbucket" width="30" height="30" /></a>
 <a href="#azure"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/azure.svg" alt="Azure" width="30" height="30" /></a>
 <a href="#spotify"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/other/spotify.svg" alt="Spotify" width="30" height="30" /></a>
+<a href="#shopify"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/other/shopify.svg" alt="Shopify" width="30" height="30" /></a>
 
 This project contains OAuth 2.0 implementation for various providers and help you understand following OAuth 2.0 flow:
 
@@ -59,7 +60,7 @@ Although this project is built using React on the front-end and NodeJS on the ba
 ### Other platforms
 
 - [x] [Spotify](#spotify)
-- [ ] [Shopify](#shopify)
+- [x] [Shopify](#shopify)
 
 ## Docs
 
@@ -324,6 +325,27 @@ Although this project is built using React on the front-end and NodeJS on the ba
 6. Update `web/.env.local` `REACT_APP_OAUTH_SPOTIFY_ID` with `Client ID`
 7. Update `api/.env.local` `OAUTH_SPOTIFY_ID` with `Client ID`
 8. Update `api/.env.local` `OAUTH_SPOTIFY_SECRET` with `Client Secret`
+
+[↑ all integrations](#integrations)
+
+---
+
+### Shopify
+
+1. Read official flow: https://shopify.dev/tutorials/authenticate-with-oauth
+2. Create a new OAuth application: https://partners.shopify.com/PARTNER_ID/apps/new/applications and fill in following:
+   1. `App name` enter your application name, eg: `Example`
+   2. `App URL` enter your application URL, eg: `https://example.com`
+   3. For `Whitelisted redirection URL(s)` make following entries:
+      1. For development, enter `http://localhost:3000/authorize/`
+      2. For production, enter `https://example.com/authorize/`
+3. Create a store https://partners.shopify.com/PARTNER_ID/stores for testing
+4. Copy `API key` and `API secret key`
+5. Update `web/.env.local` `REACT_APP_OAUTH_SHOPIFY_ID` with `API key`
+6. Update `web/.env.local` `REACT_APP_OAUTH_SHOPIFY_STORE` with your test store ID
+7. Update `api/.env.local` `OAUTH_SHOPIFY_ID` with `API key`
+8. Update `api/.env.local` `OAUTH_SHOPIFY_SECRET` with `API secret key`
+9. Update `api/.env.local` `OAUTH_SHOPIFY_STORE` with your test store ID
 
 [↑ all integrations](#integrations)
 

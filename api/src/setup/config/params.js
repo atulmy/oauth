@@ -89,6 +89,11 @@ export default {
           key: 'spotify',
           title: 'Spotify',
         },
+
+        shopify: {
+          key: 'shopify',
+          title: 'Shopify',
+        },
       },
 
       redirectUri: 'authorize/',

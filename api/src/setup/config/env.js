@@ -61,3 +61,7 @@ export const OAUTH_AZURE_TENANT = process.env.OAUTH_AZURE_TENANT
 
 export const OAUTH_SPOTIFY_ID = process.env.OAUTH_SPOTIFY_ID
 export const OAUTH_SPOTIFY_SECRET = process.env.OAUTH_SPOTIFY_SECRET
+
+export const OAUTH_SHOPIFY_ID = process.env.OAUTH_SHOPIFY_ID
+export const OAUTH_SHOPIFY_SECRET = process.env.OAUTH_SHOPIFY_SECRET
+export const OAUTH_SHOPIFY_STORE = process.env.OAUTH_SHOPIFY_STORE

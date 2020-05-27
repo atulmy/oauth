@@ -23,6 +23,7 @@ import digitalocean from 'setup/oauth/digitalocean'
 import bitbucket from 'setup/oauth/bitbucket'
 import azure from 'setup/oauth/azure'
 import spotify from 'setup/oauth/spotify'
+import shopify from 'setup/oauth/shopify'
 
 // Component
 const Home = () => {
@@ -141,6 +142,13 @@ const Home = () => {
               <Button
                 title='Spotify'
                 image={`${URL_WEB}/images/other/spotify.svg`}
+              />
+            </a>
+
+            <a href={shopify()}>
+              <Button
+                title='Shopify'
+                image={`${URL_WEB}/images/other/shopify.svg`}
               />
             </a>
           </section>
