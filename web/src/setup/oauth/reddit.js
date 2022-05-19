@@ -17,9 +17,7 @@ export default function reddit() {
         response_type: 'code',
         duration: 'temporary',
         scope: 'identity',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.reddit.key,
-        }),
+        state: params.user.oauth.providers.reddit.key,
       },
     },
     { encode: false },

@@ -15,9 +15,7 @@ export default function zoom() {
         client_id: OAUTH_ZOOM_ID,
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.zoom.key,
-        }),
+        state: params.user.oauth.providers.zoom.key,
       },
     },
     { encode: false },

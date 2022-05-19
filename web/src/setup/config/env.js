@@ -9,6 +9,7 @@ export const OAUTH_FACEBOOK_ID = process.env.REACT_APP_OAUTH_FACEBOOK_ID
 export const OAUTH_GOOGLE_ID = process.env.REACT_APP_OAUTH_GOOGLE_ID
 export const OAUTH_INSTAGRAM_ID = process.env.REACT_APP_OAUTH_INSTAGRAM_ID
 export const OAUTH_LINKEDIN_ID = process.env.REACT_APP_OAUTH_LINKEDIN_ID
+export const OAUTH_TWITTER_ID = process.env.REACT_APP_OAUTH_TWITTER_ID
 export const OAUTH_REDDIT_ID = process.env.REACT_APP_OAUTH_REDDIT_ID
 export const OAUTH_DISCORD_ID = process.env.REACT_APP_OAUTH_DISCORD_ID
 export const OAUTH_ZOOM_ID = process.env.REACT_APP_OAUTH_ZOOM_ID

@@ -16,9 +16,7 @@ export default function gitlab() {
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         scope: 'read_user+profile+email',
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.gitlab.key,
-        }),
+        state: params.user.oauth.providers.gitlab.key,
       },
     },
     { encode: false },

@@ -14,6 +14,7 @@ import facebook from 'setup/oauth/facebook'
 import google from 'setup/oauth/google'
 import instagram from 'setup/oauth/instagram'
 import linkedin from 'setup/oauth/linkedin'
+import twitter from 'setup/oauth/twitter'
 import reddit from 'setup/oauth/reddit'
 import discord from 'setup/oauth/discord'
 import zoom from 'setup/oauth/zoom'
@@ -69,6 +70,13 @@ const Home = () => {
               <Button
                 title='LinkedIn'
                 image={`${URL_WEB}/images/social/linkedin.svg`}
+              />
+            </a>
+
+            <a href={twitter()}>
+              <Button
+                title='Twitter'
+                image={`${URL_WEB}/images/social/twitter.svg`}
               />
             </a>
 

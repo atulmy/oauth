@@ -45,6 +45,11 @@ export default {
           title: 'LinkedIn',
         },
 
+        twitter: {
+          key: 'twitter',
+          title: 'Twitter',
+        },
+
         reddit: {
           key: 'reddit',
           title: 'Reddit',

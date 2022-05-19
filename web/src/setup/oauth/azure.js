@@ -23,9 +23,7 @@ export default function azure() {
           'profile',
           'https://graph.microsoft.com/user.read',
         ].join(' '),
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.azure.key,
-        }),
+        state: params.user.oauth.providers.azure.key,
       },
     },
     { encode: false },

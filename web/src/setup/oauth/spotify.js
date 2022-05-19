@@ -16,9 +16,7 @@ export default function spotify() {
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         scope: ['user-read-email'].join(' '),
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.spotify.key,
-        }),
+        state: params.user.oauth.providers.spotify.key,
       },
     },
     { encode: false },

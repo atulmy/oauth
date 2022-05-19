@@ -6,6 +6,7 @@ OAuth 2.0 implementation for various providers in one place.
 <a href="#google"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /></a>
 <a href="#instagram"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/instagram.svg" alt="Instagram" width="30" height="30" /></a>
 <a href="#linkedin"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/linkedin.svg" alt="LinkedIn" width="30" height="30" /></a>
+<a href="#twitter"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/twitter.svg" alt="Twitter" width="30" height="30" /></a>
 <a href="#reddit"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/reddit.svg" alt="Reddit" width="30" height="30" /></a>
 <a href="#discord"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/discord.svg" alt="Discord" width="30" height="30" /></a>
 <a href="#zoom"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/zoom.svg" alt="Zoom" width="30" height="30" /></a>
@@ -45,6 +46,7 @@ Although this project is built using React on the front-end and NodeJS on the ba
 - [x] [Google](#google)
 - [x] [Instagram](#instagram)
 - [x] [LinkedIn](#linkedin)
+- [x] [Twitter](#twitter)
 - [x] [Reddit](#reddit)
 - [x] [Discord](#discord)
 - [x] [Zoom](#zoom)
@@ -145,6 +147,32 @@ Although this project is built using React on the front-end and NodeJS on the ba
 5. Update `web/.env.local` `REACT_APP_OAUTH_LINKEDIN_ID` with `Client ID`
 6. Update `api/.env.local` `OAUTH_LINKEDIN_ID` with `Client ID`
 7. Update `api/.env.local` `OAUTH_LINKEDIN_SECRET` with `Client Secret`
+
+[↑ all integrations](#integrations)
+
+---
+
+### Twitter
+
+1. Read official flow: https://developer.twitter.com/en/docs/authentication/oauth-2-0
+2. Create a new project: https://developer.twitter.com/en/portal/projects-and-apps and fill in following:
+   1. `Project name` enter your project name, eg: `Example`
+   2. `Project use` select appropriate use-case
+3. Create a new app inside project: https://developer.twitter.com/en/portal/projects/<PROJECT_ID>/apps/create-or-connect and fill in following:
+   1. `App environment` select `Development`
+   2. `App name` enter your application name, eg: `Example`
+   3. Click on `App Setting` button
+   4. Under User authentication settings on `Setup` button
+   5. Enable `OAuth 2.0`
+   6. Under `Callback URI / Redirect URL`, fill in following two entries:
+      1. `http://localhost:3000/authorize/`
+      2. `https://example.com/authorize/`
+   7. Enter `Website URL`
+   8. Click `Save` button
+4. Head to `Keys and token` https://developer.twitter.com/en/portal/projects/<PROJECT_ID>/apps/<APP_ID>/keys OAuth 2.0 Client ID and Client Secret section
+   1. Update `web/.env.local` `REACT_APP_OAUTH_TWITTER_ID` with `Client ID`
+   2. Update `api/.env.local` `OAUTH_TWITTER_ID` with `Client ID`
+   3. Update `api/.env.local` `OAUTH_TWITTER_SECRET` with `Client Secret`
 
 [↑ all integrations](#integrations)
 

@@ -21,9 +21,7 @@ export default function shopify() {
         scope: ['read_orders'].join(','),
         response_type: 'code',
         nonce: `${Date.now()}`,
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.shopify.key,
-        }),
+        state: params.user.oauth.providers.shopify.key,
       },
     },
     { encode: false },

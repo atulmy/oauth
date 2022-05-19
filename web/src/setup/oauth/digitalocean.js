@@ -16,9 +16,7 @@ export default function digitalocean() {
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         scope: 'read',
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.digitalocean.key,
-        }),
+        state: params.user.oauth.providers.digitalocean.key,
       },
     },
     { encode: false },

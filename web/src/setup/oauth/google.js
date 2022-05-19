@@ -21,9 +21,7 @@ export default function google() {
         response_type: 'code',
         access_type: 'offline',
         prompt: 'consent',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.google.key,
-        }),
+        state: params.user.oauth.providers.google.key,
       },
     },
     { encode: false },

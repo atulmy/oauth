@@ -15,9 +15,7 @@ export default function github() {
         client_id: OAUTH_GITHUB_ID,
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         scope: 'read:user repo',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.github.key,
-        }),
+        state: params.user.oauth.providers.github.key,
       },
     },
     { encode: false },

@@ -17,9 +17,7 @@ export default function instagram() {
         redirect_uri: `https://example.com${routes.pagesAuthorize.path}/`, // for testing
         scope: 'user_profile,user_media',
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.instagram.key,
-        }),
+        state: params.user.oauth.providers.instagram.key,
       },
     },
     { encode: false },

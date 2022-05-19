@@ -13,6 +13,7 @@ import facebook from './facebook'
 import google from './google'
 import instagram from './instagram'
 import linkedin from './linkedin'
+import twitter from './twitter'
 import reddit from './reddit'
 import discord from './discord'
 import zoom from './zoom'
@@ -56,10 +57,8 @@ export default async function authorize({ params: { code, state } }) {
 
     let userProvider
 
-    const stateParsed = JSON.parse(state)
-
     // get user details from the platform
-    switch (stateParsed.provider) {
+    switch (state) {
       // facebook
       case params.user.oauth.providers.facebook.key:
         userProvider = await facebook({ code })
@@ -78,6 +77,11 @@ export default async function authorize({ params: { code, state } }) {
       // linkedin
       case params.user.oauth.providers.linkedin.key:
         userProvider = await linkedin({ code })
+        break
+
+      // twitter
+      case params.user.oauth.providers.twitter.key:
+        userProvider = await twitter({ code })
         break
 
       // reddit

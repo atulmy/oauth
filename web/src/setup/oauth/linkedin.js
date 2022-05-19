@@ -16,9 +16,7 @@ export default function linkedin() {
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         response_type: 'code',
         scope: ['r_emailaddress', 'r_liteprofile', 'w_member_social'].join(' '),
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.linkedin.key,
-        }),
+        state: params.user.oauth.providers.linkedin.key,
       },
     },
     { encode: false },

@@ -17,9 +17,7 @@ export default function discord() {
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         response_type: 'code',
         scope: 'identify email',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.discord.key,
-        }),
+        state: params.user.oauth.providers.discord.key,
       },
     },
     { encode: false },

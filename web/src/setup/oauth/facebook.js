@@ -15,9 +15,7 @@ export default function facebook() {
         client_id: OAUTH_FACEBOOK_ID,
         redirect_uri: `${URL_WEB}${routes.pagesAuthorize.path}/`,
         scope: `email`,
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.facebook.key,
-        }),
+        state: params.user.oauth.providers.facebook.key,
       },
     },
     { encode: false },

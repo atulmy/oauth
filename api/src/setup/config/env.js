@@ -2,7 +2,7 @@
 import dotenv from 'dotenv'
 
 // Load .env
-dotenv.config({ path: '.env.local' })
+dotenv.config({ path: './.env.local' })
 
 // Environment
 export const ENV = process.env.NODE_ENV
@@ -33,6 +33,9 @@ export const OAUTH_INSTAGRAM_SECRET = process.env.OAUTH_INSTAGRAM_SECRET
 
 export const OAUTH_LINKEDIN_ID = process.env.OAUTH_LINKEDIN_ID
 export const OAUTH_LINKEDIN_SECRET = process.env.OAUTH_LINKEDIN_SECRET
+
+export const OAUTH_TWITTER_ID = process.env.OAUTH_TWITTER_ID
+export const OAUTH_TWITTER_SECRET = process.env.OAUTH_TWITTER_SECRET
 
 export const OAUTH_REDDIT_ID = process.env.OAUTH_REDDIT_ID
 export const OAUTH_REDDIT_SECRET = process.env.OAUTH_REDDIT_SECRET

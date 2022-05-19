@@ -13,9 +13,7 @@ export default function bitbucket() {
       query: {
         client_id: OAUTH_BITBUCKET_ID,
         response_type: 'code',
-        state: JSON.stringify({
-          provider: params.user.oauth.providers.bitbucket.key,
-        }),
+        state: params.user.oauth.providers.bitbucket.key,
       },
     },
     { encode: false },
